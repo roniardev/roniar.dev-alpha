@@ -1,4 +1,5 @@
-import { Card, Flex, Text, Title } from '@mantine/core';
+import { Button, Card, Flex, Text, Title } from '@mantine/core';
+import { sendGAEvent } from '@next/third-parties/google';
 
 export function BentoCard() {
   return (
@@ -11,6 +12,14 @@ export function BentoCard() {
         }}
         gap="md"
       >
+        <Button
+          onClick={() => {
+            sendGAEvent('event', 'buttonClicked', { value: 'Klik 1A' });
+            sendGAEvent({ event: 'buttonClicked', value: 'Klik 1B' });
+          }}
+        >
+          Send GA Event
+        </Button>
         <Card withBorder w="60%">
           <Title order={4}> What is Caleus?</Title>
           <Text mt="sm" size="xs">

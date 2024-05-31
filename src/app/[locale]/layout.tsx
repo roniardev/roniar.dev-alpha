@@ -1,5 +1,6 @@
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { NavigationProgress } from '@mantine/nprogress';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { GeistSans } from 'geist/font/sans';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -48,6 +49,7 @@ export default async function LocaleLayout({
           </ReactQueryProviders>
         </NextIntlClientProvider>
       </body>
+      <GoogleAnalytics gaId="G-3P3SXQMEYE" />
     </html>
   );
 }
