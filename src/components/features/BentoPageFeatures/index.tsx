@@ -1,3 +1,5 @@
+'use client';
+
 import { Container } from '@mantine/core';
 
 import { BentoCard } from '@/components/ui/BentoCard';
