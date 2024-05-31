@@ -45,8 +45,13 @@ export function Header() {
     >
       <Container size="md" className={classes.inner}>
         <Link href={`/${locale}`}>
-          <Text fw={900} size="lg">
-            Caelus
+          <Text
+            fw={700}
+            size="xl"
+            className={`${classes.textHeader}`}
+            tt="capitalize"
+          >
+            Roni Ardiyanto
           </Text>
         </Link>
         <Group gap={5} visibleFrom="xs">

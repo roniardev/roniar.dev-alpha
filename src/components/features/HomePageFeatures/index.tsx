@@ -1,14 +1,14 @@
 import { Container, Flex, Text } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 
-import { Welcome } from './sections/Welcome/Welcome';
+import { Introduction } from './sections/Introduction';
 
 const HomePageFeatures: React.FC = () => {
   const t = useTranslations('Home');
 
   return (
     <Container py="md">
-      <Welcome />
+      <Introduction />
       <Flex direction="column" gap="md" mt="md">
         <Text size="sm">{t('firstParagraph')}</Text>
         <Text size="sm">{t('secondParagraph')}</Text>
