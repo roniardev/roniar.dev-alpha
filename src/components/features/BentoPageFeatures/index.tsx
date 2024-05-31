@@ -10,8 +10,13 @@ const BentoPageFeatures: React.FC = () => (
     <BentoCard />
     <Button
       onClick={() => {
-        sendGAEvent('event', 'customButtonClicked', { value: 'Klik 1A' });
-        sendGAEvent({ event: 'customButtonClicked', value: 'Klik 1B' });
+        sendGAEvent('event', 'customButtonClicked', {
+          value: {
+            category: 'Produksi',
+            subEvent: 'Dari PIT',
+            account: 'roni@email.com',
+          },
+        });
         sendGTMEvent({ event: 'customButtonClicked', value: 'Klik 1C' });
       }}
     >
