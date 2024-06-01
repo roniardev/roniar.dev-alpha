@@ -115,6 +115,7 @@ export function Introduction() {
             </Flex>
             <Image
               src={profileImage}
+              placeholder="blur"
               width={200}
               height={200}
               alt="Roni Ardiyanto"

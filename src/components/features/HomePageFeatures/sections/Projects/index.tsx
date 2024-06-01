@@ -14,6 +14,29 @@ import {
 import { useMediaQuery } from '@mantine/hooks';
 import Image from 'next/image';
 
+import { projects } from '@/data/projects';
+
+const shimmer = (w: number, h: number) => `
+  <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <linearGradient id="g">
+        <stop stop-color="#333" offset="20%" />
+        <stop stop-color="#222" offset="50%" />
+        <stop stop-color="#333" offset="70%" />
+      </linearGradient>
+    </defs>
+    <rect width="${w}" height="${h}" fill="#333" />
+    <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+    <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+  </svg>`;
+
+const toBase64 = (str: string) =>
+  typeof window === 'undefined'
+    ? Buffer.from(str).toString('base64')
+    : window.btoa(str);
+
+const dataUrl = `data:image/svg+xml;base64,${toBase64(shimmer(600, 400))}`;
+
 export function Projects() {
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
 
@@ -38,39 +61,58 @@ export function Projects() {
         spacing={isMobile ? 'xl' : 'lg'}
         p={isMobile ? 'lg' : ''}
       >
-        {Array.from({ length: 3 }).map((_, index) => (
+        {projects.map((val) => (
           <Card
             padding="lg"
             radius="md"
             withBorder
-            h="16rem"
+            h="15rem"
             w={isMobile ? '100%' : 'auto'}
-            key={index}
+            key={val.name}
             style={{
               boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
               cursor: 'pointer',
             }}
           >
             <Flex direction="column" justify="space-between" h="100%">
-              <Flex direction="column" gap="sm">
-                <Text
-                  fw={800}
+              <Flex
+                direction="column"
+                gap="lg"
+                justify="space-beetwen"
+                h="100%"
+              >
+                <Flex
+                  direction="column"
+                  gap="xs"
+                  justify="space-beetwen"
                   style={{
-                    letterSpacing: '-0.05em',
+                    width: '100%',
+                    height: '30%',
                   }}
                 >
-                  GSMS 2024{' '}
-                </Text>
-                <Flex direction="row" gap="xs">
-                  <Badge size="xs">Next.js</Badge>
-                  <Badge size="xs">Typescript</Badge>
-                  <Badge size="xs">GraphQL</Badge>
+                  <Text
+                    fw={800}
+                    style={{
+                      letterSpacing: '-0.05em',
+                    }}
+                  >
+                    {val.name}
+                  </Text>
+                  <Flex direction="row" gap="xs">
+                    {val.techStacks.map((tech) => (
+                      <Badge key={tech} size="xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </Flex>
                 </Flex>
-                <Flex h="70%">
+                <Flex h="70%" direction="column" align="end">
                   <Image
-                    src="https://images.unsplash.com/photo-1716154220479-8caffe787065?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={val.image}
+                    placeholder="blur"
+                    blurDataURL={dataUrl}
                     alt="image"
-                    height={500}
+                    height={700}
                     width={500}
                     style={{
                       borderRadius: '10px',

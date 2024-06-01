@@ -20,8 +20,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Caelus - Opinionated Next.js Starter',
-  description: 'I am using Mantine with Next.js!',
+  title: 'Roni Ardiyanto',
+  description: 'Roni Ardiyanto personal website',
 };
 
 type Props = {

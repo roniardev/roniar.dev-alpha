@@ -6,18 +6,21 @@ type Project = {
 
 export const projects: Project[] = [
   {
-    name: 'SPKT - Sistem Pendataan Kebudayaan Terpadu',
-    techStacks: ['Next.js', 'Mantine', 'TypeScript'],
-    image: '/projects/spkt.png',
+    name: 'SPKT - Kemdikbud',
+    techStacks: ['Next.js'],
+    image:
+      'https://res.cloudinary.com/dvhdig9hg/image/upload/v1717268067/spkt.webp',
   },
   {
     name: 'WebGIS USAID Mahulu',
-    techStacks: ['Next.js', 'Mantine', 'TypeScript', 'GraphQL', 'Mapbox'],
-    image: '/projects/usaid-mahulu.png',
+    techStacks: ['Next.js', 'GraphQL', 'Mapbox'],
+    image:
+      'https://res.cloudinary.com/dvhdig9hg/image/upload/v1717268066/usaid-mahulu.webp',
   },
   {
-    name: 'WebGIS Rencana Tata Guna Lahan Berau',
-    techStacks: ['Next.js', 'Mantine', 'TypeScript', 'GraphQL', 'Mapbox'],
-    image: '/projects/rtgl-ykan.png',
+    name: 'WebGIS RTGL Berau',
+    techStacks: ['Next.js', 'GraphQL', 'Mapbox'],
+    image:
+      'https://res.cloudinary.com/dvhdig9hg/image/upload/v1717268066/ykan-berau.webp',
   },
 ];
