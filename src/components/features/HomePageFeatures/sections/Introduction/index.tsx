@@ -180,7 +180,7 @@ export function Introduction() {
                   </Flex>
                   <Flex direction="row" align="center" gap="xs">
                     <IconBrandMedium size={28} />
-                    <Link href="https://roniardiyanto.medium.com/">
+                    <Link href="https://medium.com/@roniardiyanto">
                       <Text
                         size="sm"
                         fw={600}
@@ -194,7 +194,7 @@ export function Introduction() {
                   </Flex>
                   <Flex direction="row" align="center" gap="xs">
                     <IconBrandDiscord size={28} />
-                    <Link href="https://discord.gg/">
+                    <Link href="https://discord.com/users/infrasync">
                       <Text
                         size="sm"
                         fw={600}

@@ -2,7 +2,6 @@
 
 import { Burger, Container, Flex, Group, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconDeviceLaptop } from '@tabler/icons-react';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import { useMemo } from 'react';
@@ -49,7 +48,21 @@ export function Header() {
       }}
     >
       <Container size="md" className={classes.inner}>
-        <IconDeviceLaptop />
+        <Text
+          size="xl"
+          style={{
+            letterSpacing: '-0.05em',
+            // rotate text
+            transform: 'rotate(35deg)',
+            // shiny star effect
+            background: 'linear-gradient(90deg, #f12711, #f5af19)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+          }}
+          fw={900}
+        >
+          RA
+        </Text>
         <Link href={`/${locale}`}>
           <Text
             fw={700}

@@ -66,7 +66,7 @@ export function Projects() {
             padding="lg"
             radius="md"
             withBorder
-            h="15rem"
+            h="16rem"
             w={isMobile ? '100%' : 'auto'}
             key={val.name}
             style={{
@@ -106,7 +106,7 @@ export function Projects() {
                     ))}
                   </Flex>
                 </Flex>
-                <Flex h="70%" direction="column" align="end">
+                <Flex h="100%" direction="column" align="end">
                   <Image
                     src={val.image}
                     placeholder="blur"
@@ -117,7 +117,7 @@ export function Projects() {
                     style={{
                       borderRadius: '10px',
                       width: '100%',
-                      height: '90%',
+                      height: '100%',
                     }}
                   />
                 </Flex>
