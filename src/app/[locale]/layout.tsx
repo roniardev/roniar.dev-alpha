@@ -1,7 +1,7 @@
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { NavigationProgress } from '@mantine/nprogress';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
-import { GeistSans } from 'geist/font/sans';
+import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import React from 'react';
@@ -13,6 +13,11 @@ import '@mantine/nprogress/styles.css';
 import ReactQueryProviders from '@/components/utils/Providers';
 
 import { theme } from '@/theme';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Caelus - Opinionated Next.js Starter',
@@ -39,7 +44,7 @@ export default async function LocaleLayout({
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </head>
-      <body className={GeistSans.className}>
+      <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ReactQueryProviders>
             <MantineProvider theme={theme}>

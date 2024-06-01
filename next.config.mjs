@@ -5,7 +5,7 @@ import { createSecureHeaders } from 'next-secure-headers';
 import remarkGfm from 'remark-gfm';
 import million from 'million/compiler';
 
-const hostnames = ['localhost:3000', 'roniar.dev'];
+const hostnames = ['localhost:3000', 'roniar.dev', 'images.unsplash.com'];
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

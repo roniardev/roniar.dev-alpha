@@ -75,6 +75,7 @@
     rgba(160, 159, 160, 0.8),
     rgb(71, 85, 105)
   );
+  letter-spacing: '-0.05';
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

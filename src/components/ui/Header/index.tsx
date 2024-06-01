@@ -2,6 +2,7 @@
 
 import { Burger, Container, Flex, Group, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { IconDeviceLaptop } from '@tabler/icons-react';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import { useMemo } from 'react';
@@ -19,7 +20,11 @@ export function Header() {
   const locale = useLocale();
 
   const links = useMemo(
-    () => [{ link: `/${locale}/bento`, label: 'Bento' }],
+    () => [
+      { link: `/${locale}/projects`, label: 'Projects' },
+      { link: `/${locale}/side-projects`, label: 'Side Projects' },
+      { link: `/${locale}/friends-projects`, label: 'Friends' },
+    ],
     [locale],
   );
 
@@ -44,12 +49,16 @@ export function Header() {
       }}
     >
       <Container size="md" className={classes.inner}>
+        <IconDeviceLaptop />
         <Link href={`/${locale}`}>
           <Text
             fw={700}
             size="xl"
             className={`${classes.textHeader}`}
             tt="capitalize"
+            style={{
+              letterSpacing: '-0.05em',
+            }}
           >
             Roni Ardiyanto
           </Text>
