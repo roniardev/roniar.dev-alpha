@@ -123,7 +123,7 @@ export function Footer() {
               variant="gradient"
               gradient={{ from: 'yellow', to: 'indigo', deg: 278 }}
             >
-              ALPHA-2024.6.02
+              ALPHA-2024.6.04
             </Badge>
             <Badge variant="dot" size="xs" color="green.5">
               {t('SystemInfo.isNormal')}

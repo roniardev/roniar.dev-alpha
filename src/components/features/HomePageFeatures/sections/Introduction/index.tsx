@@ -2,6 +2,7 @@
 
 import {
   Badge,
+  Button,
   Card,
   em,
   Flex,
@@ -12,6 +13,7 @@ import {
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import {
+  IconBook,
   IconBrandDiscord,
   IconBrandGithub,
   IconBrandLinkedin,
@@ -21,6 +23,8 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import profileImage from 'public/images/profil.jpg';
+
+import classes from './styles.module.css';
 
 import { FadeDownShow } from '@/components/ui/FadeDownShow';
 import { FadeInShow } from '@/components/ui/FadeInShow';
@@ -46,14 +50,7 @@ export function Introduction() {
           }}
         >
           {' '}
-          <Card
-            withBorder
-            w="100%"
-            radius="md"
-            style={{
-              boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
-            }}
-          >
+          <Card withBorder w="100%" radius="md" className={classes.card}>
             <Flex
               direction={isMobile ? 'column-reverse' : 'row'}
               gap="md"
@@ -144,13 +141,7 @@ export function Introduction() {
               height: '100%',
             }}
           >
-            <Card
-              withBorder
-              radius="md"
-              style={{
-                boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
-              }}
-            >
+            <Card withBorder radius="md" className={classes.card}>
               <Flex direction="column" gap="lg" align="center" justify="center">
                 <Badge p="md">
                   <Title
@@ -168,7 +159,10 @@ export function Introduction() {
                   <SimpleGrid cols={2} spacing="xl">
                     <Flex direction="row" align="center" gap="xs">
                       <IconBrandLinkedin size={28} />
-                      <Link href="https://www.linkedin.com/in/roniardiyanto/">
+                      <Link
+                        href="https://www.linkedin.com/in/roniardiyanto/"
+                        target="_blank"
+                      >
                         <Text
                           size="sm"
                           fw={600}
@@ -182,7 +176,7 @@ export function Introduction() {
                     </Flex>
                     <Flex direction="row" align="center" gap="xs">
                       <IconBrandGithub size={28} />
-                      <Link href="https://github.com/infrasync">
+                      <Link href="https://github.com/infrasync" target="_blank">
                         <Text
                           size="sm"
                           fw={600}
@@ -196,7 +190,10 @@ export function Introduction() {
                     </Flex>
                     <Flex direction="row" align="center" gap="xs">
                       <IconBrandMedium size={28} />
-                      <Link href="https://medium.com/@roniardiyanto">
+                      <Link
+                        href="https://medium.com/@roniardiyanto"
+                        target="_blank"
+                      >
                         <Text
                           size="sm"
                           fw={600}
@@ -210,7 +207,10 @@ export function Introduction() {
                     </Flex>
                     <Flex direction="row" align="center" gap="xs">
                       <IconBrandDiscord size={28} />
-                      <Link href="https://discord.com/users/infrasync">
+                      <Link
+                        href="https://discord.com/users/infrasync"
+                        target="_blank"
+                      >
                         <Text
                           size="sm"
                           fw={600}
@@ -238,21 +238,42 @@ export function Introduction() {
               w="100%"
               radius="md"
               h="100%"
-              style={{
-                boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
-              }}
+              className={classes.card}
             >
-              <Flex direction="row">
-                <Title
-                  order={3}
-                  fw={800}
-                  style={{
-                    letterSpacing: '-0.05em',
-                  }}
-                >
-                  Indonesia
-                </Title>
-                <IconLocation />
+              <Flex direction="column" gap="sm">
+                <Flex direction="row" align="center" gap="xs">
+                  <Title
+                    order={3}
+                    fw={800}
+                    style={{
+                      letterSpacing: '-0.05em',
+                    }}
+                  >
+                    Indonesia
+                  </Title>
+                  <IconLocation />
+                </Flex>
+                <Flex direction="row" w="100%">
+                  <Link
+                    href="https://resume.roniar.dev"
+                    target="_blank"
+                    style={{ width: '100%' }}
+                  >
+                    <Button
+                      leftSection={<IconBook size={20} />}
+                      radius="xl"
+                      variant="gradient"
+                      gradient={{ from: 'blue', to: 'orange', deg: 204 }}
+                      fw={700}
+                      style={{
+                        letterSpacing: '-0.05em',
+                      }}
+                      w="100%"
+                    >
+                      Read my Resume
+                    </Button>
+                  </Link>
+                </Flex>
               </Flex>
             </Card>
           </FadeDownShow>

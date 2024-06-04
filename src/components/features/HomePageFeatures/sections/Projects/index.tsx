@@ -14,6 +14,8 @@ import {
 import { useMediaQuery } from '@mantine/hooks';
 import Image from 'next/image';
 
+import classes from './styles.module.css';
+
 import { projects } from '@/data/projects';
 
 import { FadeUpShow } from '@/components/ui/FadeUpShow';
@@ -72,10 +74,7 @@ export function Projects() {
               h="16rem"
               w={isMobile ? '100%' : 'auto'}
               key={val.name}
-              style={{
-                boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
-                cursor: 'pointer',
-              }}
+              className={classes.card}
             >
               <Flex direction="column" justify="space-between" h="100%">
                 <Flex
@@ -117,11 +116,7 @@ export function Projects() {
                       alt="image"
                       height={700}
                       width={500}
-                      style={{
-                        borderRadius: '10px',
-                        width: '100%',
-                        height: '100%',
-                      }}
+                      className={classes.img}
                     />
                   </Flex>
                 </Flex>

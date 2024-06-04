@@ -23,7 +23,11 @@ export function Experiences() {
       <Timeline active={1} bulletSize={24} lineWidth={2}>
         <Timeline.Item
           bullet={<IconBriefcaseFilled size={12} />}
-          title="Frontend Developer"
+          title={
+            <Text size="lg" fw={700} style={{ letterSpacing: '-0.05em' }}>
+              Frontend Developer
+            </Text>
+          }
         >
           <Flex
             direction="row"
@@ -32,7 +36,7 @@ export function Experiences() {
             w="100%"
             justify="space-between"
           >
-            <Text size="md" fw={700}>
+            <Text size="md" fw={500}>
               PT. Optima Media Teknologi
             </Text>
             <Badge tt="capitalize" variant="outline" p="sm" my="xs">
@@ -56,7 +60,11 @@ export function Experiences() {
 
         <Timeline.Item
           bullet={<IconBriefcase size={12} />}
-          title="Frontend Developer Intern"
+          title={
+            <Text size="lg" fw={700} style={{ letterSpacing: '-0.05em' }}>
+              Frontend Developer Intern
+            </Text>
+          }
         >
           <Flex
             direction="row"
@@ -65,7 +73,7 @@ export function Experiences() {
             w="100%"
             justify="space-between"
           >
-            <Text size="md" fw={700}>
+            <Text size="md" fw={500}>
               NAFAS Indonesia
             </Text>
             <Badge tt="capitalize" variant="outline" p="sm" my="xs">
@@ -87,7 +95,11 @@ export function Experiences() {
         </Timeline.Item>
 
         <Timeline.Item
-          title="Frontend Developer Intern"
+          title={
+            <Text size="lg" fw={700} style={{ letterSpacing: '-0.05em' }}>
+              Frontend Developer Intern
+            </Text>
+          }
           bullet={<IconBriefcase size={12} />}
           lineVariant="dashed"
         >
@@ -98,7 +110,7 @@ export function Experiences() {
             w="100%"
             justify="space-between"
           >
-            <Text size="md" fw={700}>
+            <Text size="md" fw={500}>
               GoTo Impact
             </Text>
             <Badge tt="capitalize" variant="outline" p="sm" my="xs">
