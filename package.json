@@ -28,13 +28,17 @@
     "lint:strict": "eslint --max-warnings=0 src"
   },
   "dependencies": {
+    "@keystatic/core": "^0.5.18",
+    "@keystatic/next": "^5.0.1",
     "@mantine/core": "^7.10.0",
     "@mantine/hooks": "^7.10.0",
     "@mantine/nprogress": "^7.10.0",
     "@mantine/vanilla-extract": "^7.10.0",
+    "@markdoc/markdoc": "^0.4.0",
     "@next/bundle-analyzer": "^13.5.3",
     "@next/mdx": "^14.0.0",
     "@next/third-parties": "^14.2.3",
+    "@syfxlin/reks": "^1.0.4",
     "@t3-oss/env-core": "^0.7.0",
     "@tabler/icons-react": "^2.20.0",
     "@tanstack/query-core": "^5.29.0",
@@ -81,7 +85,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.5.1",
     "@types/node": "^20.2.5",
-    "@types/react": "18.2.7",
+    "@types/react": "18.3.3",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.7",
     "babel-loader": "^9.1.2",
@@ -116,7 +120,7 @@
     "storybook": "^7.4.3",
     "storybook-dark-mode": "^3.0.0",
     "ts-jest": "^29.1.0",
-    "typescript": "5.2.2"
+    "typescript": "5.4.5"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
