@@ -102,6 +102,26 @@ export default async function LocaleLayout({
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <meta name="description" content={siteConfig.description} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={siteConfig.name} />
+        <meta property="og:description" content={siteConfig.description} />
+        <meta property="og:url" content={siteConfig.url} />
+        <meta property="og:image" content="https://roniar.dev/meta.jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={siteConfig.name} />
+        <meta name="twitter:description" content={siteConfig.description} />
+        <meta name="twitter:image" content="https://roniar.dev/meta.jpeg" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
+        <meta name="twitter:site" content="@roniardiyanto" />
+        <meta name="twitter:creator" content="@roniardiyanto" />
+        <meta name="twitter:domain" content="roniar.dev" />
+        <meta name="twitter:url" content={siteConfig.url} />
       </head>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
