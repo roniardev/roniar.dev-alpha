@@ -27,10 +27,6 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',
@@ -124,7 +120,11 @@ export default async function LocaleLayout({
         <meta name="twitter:url" content={siteConfig.url} />
       </head>
       <body className={inter.className}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider
+          locale={locale}
+          messages={messages}
+          timeZone="Asia/Jakarta"
+        >
           <ReactQueryProviders>
             <MantineProvider theme={theme}>
               <NavigationProgress aria-label="Progress Load Bar" />

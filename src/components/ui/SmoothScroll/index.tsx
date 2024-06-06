@@ -1,5 +1,6 @@
 'use client';
 
+import { useViewportSize } from '@mantine/hooks';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
@@ -10,6 +11,7 @@ export default function SmoothScroll({
 }) {
   // Scroll progress (0 to 1) of the window
   const { scrollYProgress } = useScroll();
+  const { height } = useViewportSize();
 
   // Use framer motion's useSpring() hook to smooth the scrollYProgress value
   const smoothProgress = useSpring(scrollYProgress, { mass: 0.1 });
@@ -18,10 +20,7 @@ export default function SmoothScroll({
   const [contentHeight, setContentHeight] = useState(0);
 
   // The value to transform the content to
-  const y = useTransform(
-    smoothProgress,
-    (v) => v * -(contentHeight - window.innerHeight),
-  );
+  const y = useTransform(smoothProgress, (v) => v * -(contentHeight - height));
 
   // A reference to hold the value of the content
   const contentRef = useRef<HTMLDivElement>(null);
@@ -36,12 +35,6 @@ export default function SmoothScroll({
 
     // Call the resize handler once, initially
     handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
   }, [contentRef]);
 
   return (
