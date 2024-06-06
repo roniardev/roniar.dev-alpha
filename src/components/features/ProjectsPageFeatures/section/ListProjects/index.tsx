@@ -3,6 +3,7 @@
 import {
   Badge,
   Center,
+  em,
   Flex,
   Pagination,
   SimpleGrid,
@@ -191,7 +192,11 @@ export async function ListProjects(props: Props) {
                     >
                       {val.entry.name}
                     </Text>
-                    <Badge color="orange.7">
+                    <Badge
+                      w={em(100)}
+                      variant="gradient"
+                      gradient={{ from: 'orange', to: 'indigo', deg: 313 }}
+                    >
                       {dayjs(val.entry.date).year()}
                     </Badge>
                   </Flex>

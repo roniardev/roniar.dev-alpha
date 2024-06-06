@@ -125,7 +125,11 @@ export function Projects() {
           ))}
         </SimpleGrid>
       </FadeUpShow>
-      <Button radius="md">View More Projects...</Button>
+      <Button radius="lg">
+        <Text size="md" fw={700} style={{ letterSpacing: '-0.05em' }}>
+          View More Projects...
+        </Text>
+      </Button>
     </Flex>
   );
 }

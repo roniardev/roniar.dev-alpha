@@ -5,7 +5,7 @@ import PageLayout from '@/components/layouts/PageLayout';
 
 import { reader } from '@/app/reader';
 
-export default async function BentoPage() {
+export default async function ProjectsPage() {
   const projects = await reader.collections.projects.all();
 
   return (

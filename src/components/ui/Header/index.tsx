@@ -21,8 +21,7 @@ export function Header() {
   const links = useMemo(
     () => [
       { link: `/${locale}/projects`, label: 'Projects' },
-      { link: `/${locale}/side-projects`, label: 'Side Projects' },
-      { link: `/${locale}/friends-projects`, label: 'Friends' },
+      // { link: `/${locale}/friends`, label: 'Friends' },
     ],
     [locale],
   );
