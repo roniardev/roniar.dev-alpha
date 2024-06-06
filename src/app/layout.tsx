@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: '/meta.jpeg',
+        url: 'https://roniar.dev/meta.jpeg',
         width: 1200,
         height: 630,
         alt: siteConfig.name,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: '/meta.jpeg',
+        url: 'https://roniar.dev/meta.jpeg',
         width: 1200,
         height: 630,
         alt: siteConfig.name,
