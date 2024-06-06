@@ -3,17 +3,18 @@
 import {
   Badge,
   Center,
-  em,
   Flex,
   Pagination,
-  Select,
   SimpleGrid,
   Text,
   Title,
 } from '@mantine/core';
+import dayjs from 'dayjs';
 import Image from 'next/image';
 
 import classes from './styles.module.css';
+
+import { projects } from '@/data/projects';
 
 import { Card } from './Card';
 
@@ -67,9 +68,9 @@ export async function ListProjects(props: Props) {
         align="center"
         px="md"
       >
-        <Select
+        {/* <Select
           withCheckIcon={false}
-          defaultSearchValue=""
+          defaultValue=""
           data={[
             {
               label: 'All',
@@ -91,7 +92,7 @@ export async function ListProjects(props: Props) {
           variant="default"
           radius="lg"
           width={em(200)}
-        />
+        /> */}
         <Center w="100%">
           <Badge p="md">
             <Title
@@ -106,7 +107,7 @@ export async function ListProjects(props: Props) {
             </Title>
           </Badge>
         </Center>
-        <Select
+        {/* <Select
           withCheckIcon={false}
           defaultValue=""
           data={[
@@ -130,7 +131,7 @@ export async function ListProjects(props: Props) {
           variant="default"
           radius="lg"
           width={em(200)}
-        />
+        /> */}
       </Flex>
 
       <SimpleGrid
@@ -176,14 +177,24 @@ export async function ListProjects(props: Props) {
                     height: '30%',
                   }}
                 >
-                  <Text
-                    fw={800}
-                    style={{
-                      letterSpacing: '-0.05em',
-                    }}
+                  <Flex
+                    direction="row"
+                    w="100%"
+                    align="center"
+                    justify="space-between"
                   >
-                    {val.entry.name}
-                  </Text>
+                    <Text
+                      fw={800}
+                      style={{
+                        letterSpacing: '-0.05em',
+                      }}
+                    >
+                      {val.entry.name}
+                    </Text>
+                    <Badge color="orange.7">
+                      {dayjs(val.entry.date).year()}
+                    </Badge>
+                  </Flex>
                   <Flex direction="row" gap="xs">
                     {val.entry.tags.map((tech) => (
                       <Badge key={tech} size="xs">
@@ -209,7 +220,7 @@ export async function ListProjects(props: Props) {
         ))}
       </SimpleGrid>
       <Center>
-        <Pagination total={8} radius="xl" />
+        <Pagination total={projects.length / 4 + 1} radius="xl" />
       </Center>
     </Flex>
   );
