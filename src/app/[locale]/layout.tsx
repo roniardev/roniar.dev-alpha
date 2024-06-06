@@ -1,6 +1,7 @@
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { NavigationProgress } from '@mantine/nprogress';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
+import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -12,6 +13,7 @@ import '@mantine/nprogress/styles.css';
 
 import ReactQueryProviders from '@/components/utils/Providers';
 
+import { siteConfig } from '@/config/site';
 import { theme } from '@/theme';
 
 const inter = Inter({
@@ -19,9 +21,49 @@ const inter = Inter({
   display: 'swap',
 });
 
-export const metadata = {
-  title: 'Roni Ardiyanto',
-  description: 'Roni Ardiyanto personal website',
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [
+      {
+        url: '/meta.jpeg',
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  twitter: {
+    title: 'Roni Ardiyanto - Software Developer',
+    description: siteConfig.description,
+    images: [
+      {
+        url: '/meta.jpeg',
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+    card: 'summary_large_image',
+  },
 };
 
 type Props = {
