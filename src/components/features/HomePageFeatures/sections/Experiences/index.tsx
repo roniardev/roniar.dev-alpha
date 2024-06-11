@@ -3,6 +3,8 @@
 import { Badge, Center, Flex, Text, Timeline, Title } from '@mantine/core';
 import { IconBriefcase, IconBriefcaseFilled } from '@tabler/icons-react';
 
+import { FadeInShow } from '@/components/ui/FadeInShow';
+
 export function Experiences() {
   return (
     <Flex direction="column" gap="md" my="md">
@@ -39,17 +41,19 @@ export function Experiences() {
             <Text size="md" fw={500}>
               PT. Optima Media Teknologi
             </Text>
-            <Badge tt="capitalize" variant="outline" p="sm" my="xs">
-              <Text
-                size="xs"
-                fw={600}
-                style={{
-                  letterSpacing: '-0.05em',
-                }}
-              >
-                Oct 2022 - Present
-              </Text>
-            </Badge>
+            <FadeInShow>
+              <Badge tt="capitalize" variant="outline" p="sm" my="xs">
+                <Text
+                  size="xs"
+                  fw={600}
+                  style={{
+                    letterSpacing: '-0.05em',
+                  }}
+                >
+                  Oct 2022 - Present
+                </Text>
+              </Badge>
+            </FadeInShow>
           </Flex>
           <Text c="dimmed" size="sm">
             I work closely with clients to understand their unique needs and
@@ -76,17 +80,19 @@ export function Experiences() {
             <Text size="md" fw={500}>
               NAFAS Indonesia
             </Text>
-            <Badge tt="capitalize" variant="outline" p="sm" my="xs">
-              <Text
-                size="xs"
-                fw={600}
-                style={{
-                  letterSpacing: '-0.05em',
-                }}
-              >
-                May 2022 - Aug 2022{' '}
-              </Text>
-            </Badge>
+            <FadeInShow>
+              <Badge tt="capitalize" variant="outline" p="sm" my="xs">
+                <Text
+                  size="xs"
+                  fw={600}
+                  style={{
+                    letterSpacing: '-0.05em',
+                  }}
+                >
+                  May 2022 - Aug 2022{' '}
+                </Text>
+              </Badge>
+            </FadeInShow>
           </Flex>
           <Text c="dimmed" size="sm">
             I worked on dashboard realtime monitoring for air quality data from
@@ -113,17 +119,19 @@ export function Experiences() {
             <Text size="md" fw={500}>
               GoTo Impact
             </Text>
-            <Badge tt="capitalize" variant="outline" p="sm" my="xs">
-              <Text
-                size="xs"
-                fw={600}
-                style={{
-                  letterSpacing: '-0.05em',
-                }}
-              >
-                Feb 2022 - Aug 2022
-              </Text>
-            </Badge>
+            <FadeInShow>
+              <Badge tt="capitalize" variant="outline" p="sm" my="xs">
+                <Text
+                  size="xs"
+                  fw={600}
+                  style={{
+                    letterSpacing: '-0.05em',
+                  }}
+                >
+                  Feb 2022 - Aug 2022
+                </Text>
+              </Badge>
+            </FadeInShow>
           </Flex>
 
           <Text c="dimmed" size="sm">

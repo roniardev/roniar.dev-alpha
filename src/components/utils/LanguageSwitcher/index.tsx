@@ -19,7 +19,7 @@ export default function LocaleSwitcher() {
       <Menu.Dropdown>
         <Menu.Label>{t('selectTitle')}</Menu.Label>
         {locales.map((v) => (
-          <Menu.Item disabled={v === locale}>
+          <Menu.Item disabled={v === locale} key={v}>
             <Link
               href={pathname.substring(0, 1) + v + pathname.substring(2 + 1)}
               key={v}

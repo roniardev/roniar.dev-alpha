@@ -156,12 +156,21 @@ export function Introduction() {
                   </Title>
                 </Badge>
                 <Flex direction="column" gap="xl">
-                  <SimpleGrid cols={2} spacing="xl">
-                    <Flex direction="row" align="center" gap="xs">
-                      <IconBrandLinkedin size={28} />
-                      <Link
-                        href="https://www.linkedin.com/in/roniardiyanto/"
-                        target="_blank"
+                  <SimpleGrid cols={2} spacing="sm">
+                    <Link
+                      href="https://www.linkedin.com/in/roniardiyanto/"
+                      target="_blank"
+                    >
+                      <Button
+                        leftSection={<IconBrandLinkedin size={26} />}
+                        size="sm"
+                        radius="xl"
+                        variant="subtle"
+                        fw={700}
+                        style={{
+                          letterSpacing: '-0.05em',
+                        }}
+                        className={classes.socialButton}
                       >
                         <Text
                           size="sm"
@@ -172,11 +181,20 @@ export function Introduction() {
                         >
                           LinkedIn
                         </Text>
-                      </Link>
-                    </Flex>
-                    <Flex direction="row" align="center" gap="xs">
-                      <IconBrandGithub size={28} />
-                      <Link href="https://github.com/infrasync" target="_blank">
+                      </Button>
+                    </Link>
+                    <Link href="https://github.com/infrasync" target="_blank">
+                      <Button
+                        leftSection={<IconBrandGithub size={26} />}
+                        size="sm"
+                        radius="xl"
+                        variant="subtle"
+                        fw={700}
+                        style={{
+                          letterSpacing: '-0.05em',
+                        }}
+                        className={classes.socialButton}
+                      >
                         <Text
                           size="sm"
                           fw={600}
@@ -186,13 +204,23 @@ export function Introduction() {
                         >
                           Github
                         </Text>
-                      </Link>
-                    </Flex>
-                    <Flex direction="row" align="center" gap="xs">
-                      <IconBrandMedium size={28} />
-                      <Link
-                        href="https://medium.com/@roniardiyanto"
-                        target="_blank"
+                      </Button>
+                    </Link>
+
+                    <Link
+                      href="https://medium.com/@roniardiyanto"
+                      target="_blank"
+                    >
+                      <Button
+                        leftSection={<IconBrandMedium size={26} />}
+                        size="sm"
+                        radius="xl"
+                        variant="subtle"
+                        fw={700}
+                        style={{
+                          letterSpacing: '-0.05em',
+                        }}
+                        className={classes.socialButton}
                       >
                         <Text
                           size="sm"
@@ -203,13 +231,22 @@ export function Introduction() {
                         >
                           Medium
                         </Text>
-                      </Link>
-                    </Flex>
-                    <Flex direction="row" align="center" gap="xs">
-                      <IconBrandDiscord size={28} />
-                      <Link
-                        href="https://discord.com/users/infrasync"
-                        target="_blank"
+                      </Button>
+                    </Link>
+                    <Link
+                      href="https://discord.com/users/infrasync"
+                      target="_blank"
+                    >
+                      <Button
+                        leftSection={<IconBrandDiscord size={26} />}
+                        size="sm"
+                        radius="xl"
+                        variant="subtle"
+                        fw={700}
+                        style={{
+                          letterSpacing: '-0.05em',
+                        }}
+                        className={classes.socialButton}
                       >
                         <Text
                           size="sm"
@@ -220,8 +257,8 @@ export function Introduction() {
                         >
                           Discord
                         </Text>
-                      </Link>
-                    </Flex>
+                      </Button>
+                    </Link>
                   </SimpleGrid>
                 </Flex>
               </Flex>
@@ -260,7 +297,23 @@ export function Introduction() {
                     style={{ width: '100%' }}
                   >
                     <Button
-                      leftSection={<IconBook size={20} />}
+                      size="xs"
+                      leftSection={
+                        <>
+                          <Flex direction="row" align="center" gap="xs">
+                            <IconBook size={20} />
+                            <Text
+                              size="sm"
+                              fw={800}
+                              style={{
+                                letterSpacing: '-0.05em',
+                              }}
+                            >
+                              Read my Resume
+                            </Text>
+                          </Flex>
+                        </>
+                      }
                       radius="xl"
                       variant="gradient"
                       gradient={{ from: 'blue', to: 'orange', deg: 204 }}
@@ -269,9 +322,8 @@ export function Introduction() {
                         letterSpacing: '-0.05em',
                       }}
                       w="100%"
-                    >
-                      Read my Resume
-                    </Button>
+                      className={classes.button}
+                    />
                   </Link>
                 </Flex>
               </Flex>
