@@ -12,6 +12,7 @@ import {
 } from '@mantine/core';
 import dayjs from 'dayjs';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import classes from './styles.module.css';
 
@@ -150,78 +151,84 @@ export async function ListProjects(props: Props) {
         }}
       >
         {props?.projects.map((val) => (
-          <Card
-            padding="lg"
-            radius="md"
-            withBorder
-            h="16rem"
-            w={{
-              sm: '100%',
-              md: 'auto',
-            }}
+          <Link
             key={val.slug}
-            className={classes.card}
+            href={val.entry.projectUrl || '#'}
+            target="_blank"
           >
-            <Flex direction="column" justify="space-between" h="100%">
-              <Flex
-                direction="column"
-                gap="lg"
-                justify="space-beetwen"
-                h="100%"
-              >
+            <Card
+              padding="lg"
+              radius="md"
+              withBorder
+              h="16rem"
+              w={{
+                sm: '100%',
+                md: 'auto',
+              }}
+              key={val.slug}
+              className={classes.card}
+            >
+              <Flex direction="column" justify="space-between" h="100%">
                 <Flex
                   direction="column"
-                  gap="xs"
+                  gap="lg"
                   justify="space-beetwen"
-                  style={{
-                    width: '100%',
-                    height: '30%',
-                  }}
+                  h="100%"
                 >
                   <Flex
-                    direction="row"
-                    w="100%"
-                    align="center"
-                    justify="space-between"
+                    direction="column"
+                    gap="xs"
+                    justify="space-beetwen"
+                    style={{
+                      width: '100%',
+                      height: '30%',
+                    }}
                   >
-                    <Text
-                      fw={800}
-                      style={{
-                        letterSpacing: '-0.05em',
-                      }}
+                    <Flex
+                      direction="row"
+                      w="100%"
+                      align="center"
+                      justify="space-between"
                     >
-                      {val.entry.name}
-                    </Text>
-                    <Badge
-                      w={em(100)}
-                      variant="gradient"
-                      gradient={{ from: 'orange', to: 'indigo', deg: 313 }}
-                    >
-                      {dayjs(val.entry.date).year()}
-                    </Badge>
-                  </Flex>
-                  <Flex direction="row" gap="xs">
-                    {val.entry.tags.map((tech) => (
-                      <Badge key={tech} size="xs">
-                        {tech}
+                      <Text
+                        fw={800}
+                        style={{
+                          letterSpacing: '-0.05em',
+                        }}
+                      >
+                        {val.entry.name}
+                      </Text>
+                      <Badge
+                        w={em(100)}
+                        variant="gradient"
+                        gradient={{ from: 'orange', to: 'indigo', deg: 313 }}
+                      >
+                        {dayjs(val.entry.date).year()}
                       </Badge>
-                    ))}
+                    </Flex>
+                    <Flex direction="row" gap="xs">
+                      {val.entry.tags.map((tech) => (
+                        <Badge key={tech} size="xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </Flex>
                   </Flex>
-                </Flex>
-                <Flex h="100%" direction="column" align="end">
-                  <Image
-                    src={val.entry.thumbnailUrlImage ?? ''}
-                    placeholder="blur"
-                    blurDataURL={dataUrl}
-                    alt="image"
-                    height={700}
-                    width={500}
-                    className={classes.img}
-                  />
+                  <Flex h="100%" direction="column" align="end">
+                    <Image
+                      src={val.entry.thumbnailUrlImage ?? ''}
+                      placeholder="blur"
+                      blurDataURL={dataUrl}
+                      alt="image"
+                      height={700}
+                      width={500}
+                      className={classes.img}
+                    />
+                  </Flex>
                 </Flex>
               </Flex>
-            </Flex>
-          </Card>
+            </Card>
+          </Link>
         ))}
       </SimpleGrid>
       <Center>
