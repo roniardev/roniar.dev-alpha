@@ -313,7 +313,7 @@ export function Introduction() {
                 </Flex>
                 <Flex direction="row" w="100%">
                   <Link
-                    href="https://bit.ly/cv-resume-roni-ardiyanto"
+                    href="https://dub.sh/resume-roni"
                     target="_blank"
                     style={{ width: '100%' }}
                   >
