@@ -141,7 +141,7 @@ export function Introduction() {
                 </Text>
               </Flex>
               <Image
-                src="https://res.cloudinary.com/dvhdig9hg/image/upload/v1716976592/01_-_PFP_BW_Keren_xqwdby.jpg"
+                src="https://res.cloudinary.com/dvhdig9hg/image/upload/v1722088184/roni-pfp-image.jpg"
                 placeholder="blur"
                 blurDataURL={dataUrl}
                 width={200}
