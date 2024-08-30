@@ -39,6 +39,45 @@ export function Experiences() {
             justify="space-between"
           >
             <Text size="md" fw={500}>
+              Bank Raya (BRI Group)
+            </Text>
+            <FadeInShow>
+              <Badge tt="capitalize" variant="outline" p="sm" my="xs">
+                <Text
+                  size="xs"
+                  fw={600}
+                  style={{
+                    letterSpacing: '-0.05em',
+                  }}
+                >
+                  Aug 2024 - Now
+                </Text>
+              </Badge>
+            </FadeInShow>
+          </Flex>
+          <Text c="dimmed" size="sm">
+            Work on the Support System (SUS) for Bank Raya to handle, develop,
+            maintain, and fix bugs in the web app for Bank Raya's banking
+            operations.
+          </Text>
+        </Timeline.Item>
+
+        <Timeline.Item
+          bullet={<IconBriefcaseFilled size={12} />}
+          title={
+            <Text size="lg" fw={700} style={{ letterSpacing: '-0.05em' }}>
+              Frontend Developer
+            </Text>
+          }
+        >
+          <Flex
+            direction="row"
+            gap="sm"
+            align="center"
+            w="100%"
+            justify="space-between"
+          >
+            <Text size="md" fw={500}>
               PT. Optima Media Teknologi
             </Text>
             <FadeInShow>
@@ -50,7 +89,7 @@ export function Experiences() {
                     letterSpacing: '-0.05em',
                   }}
                 >
-                  Oct 2022 - Present
+                  Oct 2022 - Aug 2024
                 </Text>
               </Badge>
             </FadeInShow>
