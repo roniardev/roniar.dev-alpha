@@ -17,9 +17,13 @@
   right: 0;
   width: 100%;
   -webkit-backdrop-filter: brightness(100%) blur(3px); /* For Safari */
-  border-bottom: rem(0.25px) solid
-    light-dark(var(--mantine-color-dark-0), var(--mantine-color-dark-6));
+  border-bottom: rem(0.85px) solid
+    light-dark(var(--mantine-color-dark-0), var(--mantine-color-dark-8));
   border-top: rem(3px) solid var(--mantine-color-yellow-7);
+  box-shadow: light-dark(
+    0 0 20px rgba(134, 133, 133, 0.1),
+    0 0 20px rgba(164, 161, 161, 0.1)
+  );
 }
 
 .inner {

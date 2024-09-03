@@ -1,1 +1,18 @@
 @layer reset, base, tokens, recipes, utilities;
+@font-face {
+  font-family: 'Open Runde';
+  src:
+    url('/fonts/OpenRunde-Regular.woff2') format('woff2'),
+    url('/fonts/OpenRunde-Regular.woff') format('woff'),
+    url('/fonts/OpenRunde-Bold.woff') format('woff'),
+    url('/fonts/OpenRunde-Bold.woff2') format('woff2'),
+    url('/fonts/OpenRunde-Medium.woff') format('woff'),
+    url('/fonts/OpenRunde-Medium.woff2') format('woff2'),
+    url('/fonts/OpenRunde-SemiBold.woff') format('woff'),
+    url('/fonts/OpenRunde-SemiBold.woff2') format('woff2');
+  /* Add more font properties here */
+}
+
+:root {
+  font-family: 'Open Runde', sans-serif;
+}

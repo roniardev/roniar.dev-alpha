@@ -66,7 +66,7 @@ export function Header() {
           <Text
             fw={700}
             size="xl"
-            className={`${classes.textHeader}`}
+            // className={`${classes.textHeader}`}
             tt="capitalize"
             style={{
               letterSpacing: '-0.05em',

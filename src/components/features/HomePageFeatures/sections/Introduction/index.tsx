@@ -98,7 +98,14 @@ export function Introduction() {
                 <Text size="0.85rem">
                   Within 2+ years experience in projects.
                 </Text>
-                <Text mt="sm" size="0.85rem" lh="sm">
+                <Text
+                  mt="sm"
+                  size="0.85rem"
+                  lh="sm"
+                  style={{
+                    fontFamily: "'Open Runde' !important",
+                  }}
+                >
                   <b>Frontend Developer</b> by day, <b>Cloud Engineer</b> by
                   night. Part-time <b>Backend</b>. Always seeking new challenges
                   and opportunities to grow.

@@ -3,7 +3,7 @@ import { themeToVars } from '@mantine/vanilla-extract';
 
 // Do not forget to pass theme to MantineProvider
 export const theme = createTheme({
-  fontFamily: 'Inter, sans-serif',
+  fontFamily: 'Open Runde, sans-serif',
   primaryColor: 'cyan',
 });
 

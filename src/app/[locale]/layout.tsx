@@ -2,7 +2,6 @@ import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { NavigationProgress } from '@mantine/nprogress';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import React from 'react';
@@ -15,11 +14,6 @@ import ReactQueryProviders from '@/components/utils/Providers';
 
 import { siteConfig } from '@/config/site';
 import { theme } from '@/theme';
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: {
@@ -119,7 +113,7 @@ export default async function LocaleLayout({
         <meta name="twitter:domain" content="roniar.dev" />
         <meta name="twitter:url" content={siteConfig.url} />
       </head>
-      <body className={inter.className}>
+      <body>
         <NextIntlClientProvider
           locale={locale}
           messages={messages}

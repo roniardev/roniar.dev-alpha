@@ -1,7 +1,6 @@
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { NavigationProgress } from '@mantine/nprogress';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
-import { Inter } from 'next/font/google';
 import React from 'react';
 
 import './globals.css';
@@ -11,11 +10,6 @@ import '@mantine/nprogress/styles.css';
 import NotFoundPageFeatures from '@/components/features/NotFoundPageFeatures';
 
 import { theme } from '@/theme';
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 export const metadata = {
   title: 'Roni Ardiyanto',
@@ -50,7 +44,7 @@ export default async function NotFound() {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </head>
-      <body className={inter.className}>
+      <body>
         <MantineProvider theme={theme}>
           <NavigationProgress aria-label="Progress Load Bar" />
           <NotFoundPageFeatures />
