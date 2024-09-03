@@ -1,15 +1,15 @@
 .header {
   overflow: hidden;
   padding: 0 var(20px);
-  background-image: radial-gradient(
-    rgba(0, 0, 0, 0) 1px,
+  /* background-image: radial-gradient(
+    rgba(0, 0, 0, 0) 1.85px,
     light-dark(var(--mantine-color-white), var(--mantine-color-dark-9)) 1px
-  );
+  ); */
   background-size: 4px 4px;
-  backdrop-filter: brightness(100%) blur(5px);
+  backdrop-filter: brightness(100%) blur(25px);
   background-color: light-dark(
-    rgba(250, 250, 250, 0.625),
-    rgba(0, 0, 0, 0.625)
+    rgba(248, 249, 250, 0.625),
+    rgba(37, 38, 43, 0.625)
   );
   position: fixed;
   top: 0;
@@ -17,9 +17,8 @@
   right: 0;
   width: 100%;
   -webkit-backdrop-filter: brightness(100%) blur(3px); /* For Safari */
-  border-bottom: rem(0.85px) solid
-    light-dark(var(--mantine-color-dark-0), var(--mantine-color-dark-8));
-  border-top: rem(3px) solid var(--mantine-color-yellow-7);
+  border-bottom: rem(1px) solid light-dark(rgb(222, 226, 230), rgb(55, 58, 64));
+  /* border-top: rem(3px) solid var(--mantine-color-gray-7); */
   box-shadow: light-dark(
     0 0 20px rgba(134, 133, 133, 0.1),
     0 0 20px rgba(164, 161, 161, 0.1)

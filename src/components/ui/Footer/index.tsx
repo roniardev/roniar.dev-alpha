@@ -123,7 +123,7 @@ export function Footer() {
               variant="gradient"
               gradient={{ from: 'yellow', to: 'indigo', deg: 278 }}
             >
-              PROD-2024.06.6
+              PROD-2024.09.03
             </Badge>
             <Badge variant="dot" size="xs" color="green.5">
               {t('SystemInfo.isNormal')}
