@@ -13,17 +13,17 @@ RUN apk add bash curl
 COPY package.json  ./
 
 # Install dependensi menggunakan Yarn
-RUN npm install
+RUN npm install -g yarn
+RUN yarn install
 
 # Salin seluruh kode aplikasi ke dalam container
 COPY . .
 
 # Build aplikasi Next.js
-RUN npm run build
+RUN yarn build
 
 # Expose port yang akan digunakan oleh aplikasi (default Next.js: 3000)
 EXPOSE 3000
 
 # Jalankan perintah untuk menjalankan aplikasi
-CMD ["npm", "run", "start", "-H 0.0.0.0", "-p 3000"]
-
+CMD ["yarn", "start"]
