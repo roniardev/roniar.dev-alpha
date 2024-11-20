@@ -8,8 +8,8 @@
   background-size: 4px 4px;
   backdrop-filter: brightness(100%) blur(25px);
   background-color: light-dark(
-    rgba(248, 249, 250, 0.625),
-    rgba(37, 38, 43, 0.625)
+    rgba(248, 249, 250, 0.82),
+    rgba(37, 38, 43, 0.82)
   );
   position: fixed;
   top: 0;

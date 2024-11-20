@@ -16,6 +16,7 @@ import {
   IconBrandYoutube,
 } from '@tabler/icons-react';
 import { GeistMono } from 'geist/font';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import classes from './styles.module.css';
@@ -123,7 +124,7 @@ export function Footer() {
               variant="gradient"
               gradient={{ from: 'yellow', to: 'indigo', deg: 278 }}
             >
-              PROD-2024.09.03
+              PROD-2024.11.20
             </Badge>
             <Badge variant="dot" size="xs" color="green.5">
               {t('SystemInfo.isNormal')}
@@ -136,39 +137,45 @@ export function Footer() {
           justify="flex-end"
           wrap="nowrap"
         >
-          <ActionIcon
-            size="lg"
-            color="gray"
-            variant="subtle"
-            aria-label="Our twitter link"
-          >
-            <IconBrandTwitter
-              style={{ width: rem(18), height: rem(18) }}
-              stroke={1.5}
-            />
-          </ActionIcon>
-          <ActionIcon
-            size="lg"
-            color="gray"
-            variant="subtle"
-            aria-label="Our youtube link"
-          >
-            <IconBrandYoutube
-              style={{ width: rem(18), height: rem(18) }}
-              stroke={1.5}
-            />
-          </ActionIcon>
-          <ActionIcon
-            size="lg"
-            color="gray"
-            variant="subtle"
-            aria-label="Our instagram link"
-          >
-            <IconBrandInstagram
-              style={{ width: rem(18), height: rem(18) }}
-              stroke={1.5}
-            />
-          </ActionIcon>
+          <Link href="https://x.com/roniar.dev" target="_blank">
+            <ActionIcon
+              size="lg"
+              color="gray"
+              variant="subtle"
+              aria-label="Our twitter link"
+            >
+              <IconBrandTwitter
+                style={{ width: rem(18), height: rem(18) }}
+                stroke={1.5}
+              />
+            </ActionIcon>
+          </Link>
+          <Link href="https://www.youtube.com/@roniardev" target="_blank">
+            <ActionIcon
+              size="lg"
+              color="gray"
+              variant="subtle"
+              aria-label="Our youtube link"
+            >
+              <IconBrandYoutube
+                style={{ width: rem(18), height: rem(18) }}
+                stroke={1.5}
+              />
+            </ActionIcon>
+          </Link>
+          <Link href="https://instagram.com/roniardynt" target="_blank">
+            <ActionIcon
+              size="lg"
+              color="gray"
+              variant="subtle"
+              aria-label="Our instagram link"
+            >
+              <IconBrandInstagram
+                style={{ width: rem(18), height: rem(18) }}
+                stroke={1.5}
+              />
+            </ActionIcon>
+          </Link>
         </Group>
       </Container>
     </footer>

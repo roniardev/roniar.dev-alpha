@@ -151,11 +151,11 @@ export function Introduction() {
                 src="https://res.cloudinary.com/dvhdig9hg/image/upload/v1722088184/roni-pfp-image.jpg"
                 placeholder="blur"
                 blurDataURL={dataUrl}
-                width={200}
-                height={200}
+                width={140}
+                height={140}
                 alt="Roni Ardiyanto"
                 style={{
-                  borderRadius: '0.5em',
+                  borderRadius: '0.8em',
                 }}
               />
             </Flex>
