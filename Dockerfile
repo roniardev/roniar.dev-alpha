@@ -1,9 +1,6 @@
 # pull official base image
 FROM node:20.3.0-alpine
 
-ARG branch
-ENV env $branch
-
 # Set working directory di dalam container
 WORKDIR /app
 
@@ -13,8 +10,7 @@ RUN apk add bash curl
 COPY package.json  ./
 
 # Install dependensi menggunakan Yarn
-RUN npm install -g yarn
-RUN yarn install
+RUN yarn
 
 # Salin seluruh kode aplikasi ke dalam container
 COPY . .
