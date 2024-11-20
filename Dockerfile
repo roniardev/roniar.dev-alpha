@@ -1,5 +1,5 @@
 # pull official base image
-FROM node:20.3.0-alpine
+FROM  node:alpine3.20
 
 # Set working directory di dalam container
 WORKDIR /app
