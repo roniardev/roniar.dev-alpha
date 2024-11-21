@@ -1,12 +1,12 @@
 'use client';
 
 import { ActionIcon, useMantineColorScheme } from '@mantine/core';
-import { memo } from 'react';
 import { IconMoonFilled, IconSunFilled } from '@tabler/icons-react';
+import { memo } from 'react';
 
 import './styles.css';
 
-export const ColorSchemeToggle = memo(function ColorSchemeToggle() {
+export const ColorSchemeToggle = memo(() => {
   const { toggleColorScheme, colorScheme } = useMantineColorScheme();
 
   return (

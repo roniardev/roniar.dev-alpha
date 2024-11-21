@@ -10,14 +10,13 @@ import {
   Title,
 } from '@mantine/core';
 import { IconBriefcase, IconBriefcaseFilled } from '@tabler/icons-react';
+import { memo, useMemo } from 'react';
 
 import classes from './styles.module.css';
 
 import { FadeInShow } from '@/components/ui/FadeInShow';
-import { memo, useMemo } from 'react';
 
 function Experiences() {
-
   const experiences = useMemo(
     () => [
       {
