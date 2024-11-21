@@ -8,7 +8,7 @@ import { defaultLocale, locales } from '@/i18n/locales';
 const intlMiddleware = createIntlMiddleware({
   locales,
   defaultLocale,
-  localePrefix: 'always',
+  localePrefix: 'never',
 });
 
 /**

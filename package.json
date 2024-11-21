@@ -73,7 +73,6 @@
     "@babel/core": "^7.22.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@next/eslint-plugin-next": "^13.5.3",
-    "@pandacss/dev": "^0.15.4",
     "@storybook/addon-essentials": "^7.4.3",
     "@storybook/addon-styling": "^1.0.8",
     "@storybook/blocks": "^7.4.3",
