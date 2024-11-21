@@ -14,36 +14,37 @@ import { IconBriefcase, IconBriefcaseFilled } from '@tabler/icons-react';
 import classes from './styles.module.css';
 
 import { FadeInShow } from '@/components/ui/FadeInShow';
+import { memo, useMemo } from 'react';
 
-export function Experiences() {
-  const experiences: {
-    title: string;
-    company: string;
-    timeline: string;
-    description: string;
-  }[] = [
-    {
-      title: 'Frontend Developer',
-      company: 'Bank Raya (BRI Group)',
-      timeline: 'Aug 2024 - Now',
-      description:
-        "Work on the Support System (SUS) for Bank Raya to handle, develop, maintain, and fix bugs in the web app for Bank Raya's banking operations.",
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'PT. Optima Media Teknologi',
-      timeline: 'Oct 2022 - Aug 2024',
-      description:
-        'I worked closely with clients to understand their unique needs and create custom solutions that address their specific business challenges, especially with geospatial web applications / GIS.',
-    },
-    {
-      title: 'Frontend Developer Intern',
-      company: 'NAFAS Indonesia',
-      timeline: 'May 2022 - Aug 2022',
-      description:
-        'I worked on dashboard realtime monitoring for air quality data from IOT devices.',
-    },
-  ];
+function Experiences() {
+
+  const experiences = useMemo(
+    () => [
+      {
+        title: 'Frontend Developer',
+        company: 'Bank Raya (BRI Group)',
+        timeline: 'Aug 2024 - Now',
+        description:
+          "Work on the Support System (SUS) for Bank Raya to handle, develop, maintain, and fix bugs in the web app for Bank Raya's banking operations.",
+      },
+      {
+        title: 'Frontend Developer',
+        company: 'PT. Optima Media Teknologi',
+        timeline: 'Oct 2022 - Aug 2024',
+        description:
+          'I worked closely with clients to understand their unique needs and create custom solutions that address their specific business challenges, especially with geospatial web applications / GIS.',
+      },
+      {
+        title: 'Frontend Developer Intern',
+        company: 'NAFAS Indonesia',
+        timeline: 'May 2022 - Aug 2022',
+        description:
+          'I worked on dashboard realtime monitoring for air quality data from IOT devices.',
+      },
+    ],
+    [],
+  );
+
   return (
     <Flex direction="column" gap="md" my="md">
       <Center>
@@ -114,3 +115,5 @@ export function Experiences() {
     </Flex>
   );
 }
+
+export default memo(Experiences);

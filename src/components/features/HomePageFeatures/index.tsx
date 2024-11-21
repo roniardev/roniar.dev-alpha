@@ -1,6 +1,6 @@
 import { Container, Flex } from '@mantine/core';
 
-import { Experiences } from './sections/Experiences';
+import Experiences from './sections/Experiences';
 import { Introduction } from './sections/Introduction';
 import { Projects } from './sections/Projects';
 
