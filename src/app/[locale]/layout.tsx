@@ -10,7 +10,7 @@ import './globals.css';
 import '@mantine/core/styles.css';
 import '@mantine/nprogress/styles.css';
 
-import ReactQueryProviders from '@/components/utils/Providers';
+import { CSPostHogProvider } from '@/components/utils/Providers/PostHogProvider';
 
 import { siteConfig } from '@/config/site';
 import { theme } from '@/theme';
@@ -119,12 +119,12 @@ export default async function LocaleLayout({
           messages={messages}
           timeZone="Asia/Jakarta"
         >
-          <ReactQueryProviders>
+          <CSPostHogProvider>
             <MantineProvider theme={theme}>
               <NavigationProgress aria-label="Progress Load Bar" />
               {children}
             </MantineProvider>
-          </ReactQueryProviders>
+          </CSPostHogProvider>
         </NextIntlClientProvider>
       </body>
       <GoogleAnalytics gaId="G-3P3SXQMEYE" />
