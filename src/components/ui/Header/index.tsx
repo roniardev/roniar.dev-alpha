@@ -8,8 +8,6 @@ import { useMemo } from 'react';
 
 import classes from './styles.module.css';
 
-import { ColorSchemeToggle } from '@/components/utils/ColorSchemeToggle';
-
 export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
   const pathName = usePathname();
@@ -75,7 +73,7 @@ export function Header() {
           {items}
         </Group>
         <Group gap={12} visibleFrom="xs">
-          <ColorSchemeToggle />
+          {/* <ColorSchemeToggle /> */}
           {/* <LocaleSwitcher /> */}
         </Group>
 
@@ -97,7 +95,6 @@ export function Header() {
         }}
         hiddenFrom="xs"
       >
-        <ColorSchemeToggle />
         <Flex mb="sm">{/* <LocaleSwitcher /> */}</Flex>
         {items}
       </Flex>

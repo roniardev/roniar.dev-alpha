@@ -115,7 +115,7 @@ export default async function LocaleLayout(props: Props) {
       </head>
       <body className={plusJakarta.className}>
         <CSPostHogProvider>
-          <MantineProvider theme={theme}>
+          <MantineProvider theme={theme} forceColorScheme="light">
             <NavigationProgress aria-label="Progress Load Bar" />
             {props.children}
           </MantineProvider>
