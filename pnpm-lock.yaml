@@ -34,6 +34,9 @@ importers:
       '@next/bundle-analyzer':
         specifier: ^13.5.3
         version: 13.5.6
+      '@next/font':
+        specifier: ^14.2.15
+        version: 14.2.15(next@14.2.3(@babel/core@7.24.4)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@next/mdx':
         specifier: ^14.0.0
         version: 14.1.4(@mdx-js/react@2.3.0(react@18.3.1))
@@ -154,7 +157,7 @@ importers:
         version: 7.6.17(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/nextjs':
         specifier: ^7.4.3
-        version: 7.6.17(@swc/core@1.4.12(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)(babel-plugin-macros@3.1.0)(esbuild@0.18.20)(next@14.2.3(@babel/core@7.24.4)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.15.0)(typescript@5.4.5)(webpack-hot-middleware@2.26.1)(webpack@5.91.0(@swc/core@1.4.12(@swc/helpers@0.5.11))(esbuild@0.18.20))
+        version: 7.6.17(@next/font@14.2.15(next@14.2.3(@babel/core@7.24.4)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(@swc/core@1.4.12(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)(babel-plugin-macros@3.1.0)(esbuild@0.18.20)(next@14.2.3(@babel/core@7.24.4)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.15.0)(typescript@5.4.5)(webpack-hot-middleware@2.26.1)(webpack@5.91.0(@swc/core@1.4.12(@swc/helpers@0.5.11))(esbuild@0.18.20))
       '@storybook/react':
         specifier: ^7.4.3
         version: 7.6.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5)
@@ -2926,6 +2929,14 @@ packages:
       {
         integrity: sha512-L3oDricIIjgj1AVnRdRor21gI7mShlSwU/1ZGHmqM3LzHhXXhdkrfeNY5zif25Bi5Dd7fiJHsbhoZCHfXYvlAw==,
       }
+
+  '@next/font@14.2.15':
+    resolution:
+      {
+        integrity: sha512-QopYhBmCDDrNDynbi+ZD1hDZXmQXVFo7TmAFp4DQgO/kogz1OLbQ92hPigJbj572eZ3GaaVxNIyYVn3/eAsehg==,
+      }
+    peerDependencies:
+      next: '*'
 
   '@next/mdx@14.1.4':
     resolution:
@@ -18154,6 +18165,10 @@ snapshots:
     dependencies:
       glob: 10.3.10
 
+  '@next/font@14.2.15(next@14.2.3(@babel/core@7.24.4)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
+    dependencies:
+      next: 14.2.3(@babel/core@7.24.4)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+
   '@next/mdx@14.1.4(@mdx-js/react@2.3.0(react@18.3.1))':
     dependencies:
       source-map: 0.7.4
@@ -19991,7 +20006,7 @@ snapshots:
 
   '@storybook/mdx2-csf@1.1.0': {}
 
-  '@storybook/nextjs@7.6.17(@swc/core@1.4.12(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)(babel-plugin-macros@3.1.0)(esbuild@0.18.20)(next@14.2.3(@babel/core@7.24.4)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.15.0)(typescript@5.4.5)(webpack-hot-middleware@2.26.1)(webpack@5.91.0(@swc/core@1.4.12(@swc/helpers@0.5.11))(esbuild@0.18.20))':
+  '@storybook/nextjs@7.6.17(@next/font@14.2.15(next@14.2.3(@babel/core@7.24.4)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(@swc/core@1.4.12(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)(babel-plugin-macros@3.1.0)(esbuild@0.18.20)(next@14.2.3(@babel/core@7.24.4)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.15.0)(typescript@5.4.5)(webpack-hot-middleware@2.26.1)(webpack@5.91.0(@swc/core@1.4.12(@swc/helpers@0.5.11))(esbuild@0.18.20))':
     dependencies:
       '@babel/core': 7.24.4
       '@babel/plugin-syntax-bigint': 7.8.3(@babel/core@7.24.4)
@@ -20038,6 +20053,7 @@ snapshots:
       tsconfig-paths: 4.2.0
       tsconfig-paths-webpack-plugin: 4.1.0
     optionalDependencies:
+      '@next/font': 14.2.15(next@14.2.3(@babel/core@7.24.4)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       typescript: 5.4.5
       webpack: 5.91.0(@swc/core@1.4.12(@swc/helpers@0.5.11))(esbuild@0.18.20)
     transitivePeerDependencies:

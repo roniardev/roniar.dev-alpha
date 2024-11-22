@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 
+import './globals.css';
+
 import { siteConfig } from '@/config/site';
 
 type Props = {
@@ -10,7 +12,7 @@ type Props = {
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    template: `${siteConfig.name}`,
   },
   description: siteConfig.description,
   icons: {

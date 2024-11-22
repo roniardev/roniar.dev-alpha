@@ -1,5 +1,6 @@
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { NavigationProgress } from '@mantine/nprogress';
+import { Plus_Jakarta_Sans } from '@next/font/google';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
@@ -61,6 +62,12 @@ type Props = {
   params: { locale: string };
 };
 
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+});
+
 export default async function LocaleLayout({
   children,
   params: { locale },
@@ -113,7 +120,7 @@ export default async function LocaleLayout({
         <meta name="twitter:domain" content="roniar.dev" />
         <meta name="twitter:url" content={siteConfig.url} />
       </head>
-      <body>
+      <body className={plusJakarta.className}>
         <NextIntlClientProvider
           locale={locale}
           messages={messages}

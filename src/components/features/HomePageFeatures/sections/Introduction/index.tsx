@@ -102,9 +102,6 @@ export function Introduction() {
                   mt="sm"
                   size="0.85rem"
                   lh="sm"
-                  style={{
-                    fontFamily: "'Open Runde' !important",
-                  }}
                 >
                   <b>Frontend Developer</b> by day, <b>Cloud Engineer</b> by
                   night. Part-time <b>Backend</b>. Always seeking new challenges
