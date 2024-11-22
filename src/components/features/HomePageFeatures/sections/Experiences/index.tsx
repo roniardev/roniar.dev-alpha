@@ -4,15 +4,16 @@ import {
   Badge,
   Card,
   Center,
+  em,
   Flex,
   Text,
   Timeline,
   Title,
-  em,
 } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import { IconBriefcase, IconBriefcaseFilled } from '@tabler/icons-react';
 import { memo, useMemo } from 'react';
-import { useMediaQuery } from '@mantine/hooks';
+
 import classes from './styles.module.css';
 
 import { FadeInShow } from '@/components/ui/FadeInShow';

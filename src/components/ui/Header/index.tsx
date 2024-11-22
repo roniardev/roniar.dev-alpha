@@ -98,9 +98,7 @@ export function Header() {
         hiddenFrom="xs"
       >
         <ColorSchemeToggle />
-        <Flex mb="sm">
-          {/* <LocaleSwitcher /> */}
-        </Flex>
+        <Flex mb="sm">{/* <LocaleSwitcher /> */}</Flex>
         {items}
       </Flex>
     </header>

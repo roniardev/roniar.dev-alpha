@@ -85,7 +85,7 @@ export function Footer() {
             roniar.dev
           </Text>
           <Text size="xs" className={classes.description}>
-          Software Developer with a passion for learn and grow.
+            Software Developer with a passion for learn and grow.
           </Text>
         </div>
         {/* <div className={classes.groups}>{groups}</div> */}
