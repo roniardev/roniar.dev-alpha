@@ -8,15 +8,18 @@ import {
   Text,
   Timeline,
   Title,
+  em,
 } from '@mantine/core';
 import { IconBriefcase, IconBriefcaseFilled } from '@tabler/icons-react';
 import { memo, useMemo } from 'react';
-
+import { useMediaQuery } from '@mantine/hooks';
 import classes from './styles.module.css';
 
 import { FadeInShow } from '@/components/ui/FadeInShow';
 
 function Experiences() {
+  const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
+
   const experiences = useMemo(
     () => [
       {
@@ -80,11 +83,11 @@ function Experiences() {
                 key={experience.title}
               >
                 <Flex
-                  direction="row"
-                  gap="sm"
-                  align="center"
+                  direction={isMobile ? 'column' : 'row'}
+                  gap={isMobile ? 'xs' : 'md'}
+                  align={isMobile ? 'flex-start' : 'center'}
                   w="100%"
-                  justify="space-between"
+                  justify={isMobile ? 'flex-start' : 'space-between'}
                 >
                   <Text size="md" fw={500}>
                     {experience.company}

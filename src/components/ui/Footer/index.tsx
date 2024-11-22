@@ -17,13 +17,10 @@ import {
 } from '@tabler/icons-react';
 import { GeistMono } from 'geist/font';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 
 import classes from './styles.module.css';
 
 export function Footer() {
-  const t = useTranslations('Footer');
-
   // const data = useMemo(
   //   () => [
   //     {
@@ -88,7 +85,7 @@ export function Footer() {
             roniar.dev
           </Text>
           <Text size="xs" className={classes.description}>
-            {t('subTitle')}
+          Software Developer with a passion for learn and grow.
           </Text>
         </div>
         {/* <div className={classes.groups}>{groups}</div> */}
@@ -96,7 +93,7 @@ export function Footer() {
       <Container className={classes.afterFooter}>
         <Flex direction="column" gap="sm" justify="center">
           <Text size="xs" fw={400}>
-            © {new Date().getFullYear()} roniar.dev . {t('copyRight')}
+            © {new Date().getFullYear()} roniar.dev
           </Text>
           <Divider
             size="xs"
@@ -106,7 +103,7 @@ export function Footer() {
             className={GeistMono.className}
             label={
               <Badge size="xs" variant="outline" tt="uppercase" fw={700}>
-                {t('SystemInfo.title')}
+                System Info
               </Badge>
             }
           />
@@ -117,7 +114,7 @@ export function Footer() {
             className={GeistMono.className}
           >
             <Text size={rem(10)} fw={900} tt="uppercase">
-              {t('SystemInfo.version')}
+              Version
             </Text>
             <Badge
               size="xs"
@@ -127,7 +124,7 @@ export function Footer() {
               PROD-2024.11.20
             </Badge>
             <Badge variant="dot" size="xs" color="green.5">
-              {t('SystemInfo.isNormal')}
+              All System Operated
             </Badge>
           </Flex>
         </Flex>

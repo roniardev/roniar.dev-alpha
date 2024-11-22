@@ -1,6 +1,6 @@
 .header {
   overflow: hidden;
-  padding: 0 var(20px);
+  padding: 0 20px;
   /* background-image: radial-gradient(
     rgba(0, 0, 0, 0) 1.85px,
     light-dark(var(--mantine-color-white), var(--mantine-color-dark-9)) 1px

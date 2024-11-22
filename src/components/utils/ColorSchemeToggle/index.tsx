@@ -6,7 +6,7 @@ import { memo } from 'react';
 
 import './styles.css';
 
-export const ColorSchemeToggle = memo(() => {
+export const ColorSchemeToggle = () => {
   const { toggleColorScheme, colorScheme } = useMantineColorScheme();
 
   return (
@@ -29,4 +29,4 @@ export const ColorSchemeToggle = memo(() => {
       )}
     </ActionIcon>
   );
-});
+};

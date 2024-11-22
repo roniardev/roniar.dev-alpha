@@ -49,7 +49,7 @@ export default function SmoothScroll({
        * The content.  If it exceeds the height of the viewport, translate its y-position to the top.
        * Its position is fixed by default and moves when the user scrolls.
        */}
-      <motion.div className="scrollBody" style={{ y }} ref={contentRef}>
+      <motion.div style={{ y }} ref={contentRef}>
         {children}
       </motion.div>
     </>

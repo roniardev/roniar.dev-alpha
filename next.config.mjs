@@ -1,9 +1,5 @@
 import './src/env.mjs';
-import createMDX from '@next/mdx';
-import nextIntlPlugin from 'next-intl/plugin';
 import { createSecureHeaders } from 'next-secure-headers';
-import remarkGfm from 'remark-gfm';
-import million from 'million/compiler';
 
 const hostnames = [
   'localhost:3000',
@@ -14,18 +10,20 @@ const hostnames = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  swcMinify: true,
   // optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   /**
    * Toggle experimental features.
    */
-  experimental: {
-    serverComponentsExternalPackages: ['mysql2'],
-    mdxRs: true,
-  },
   /**
    * Configuration for next/image.
    */
+
+  experimental: {
+    turbo: {
+      moduleIdStrategy: 'deterministic',
+    },
+  },
+
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: hostnames.map((hostname) => ({
@@ -62,15 +60,13 @@ const nextConfig = {
  * Create a config wrapper required to integrate a modern Nextjs MDX support.
  * @see https://nextjs.org/docs/app/building-your-application/configuring/mdx
  */
-const withMDX = createMDX({ options: { remarkPlugins: [remarkGfm] } });
 
 /**
  * Create configuration wrapper required for using next-intl with React Server Components.
  * @see https://next-intl-docs.vercel.app/docs/getting-started/app-router-server-components
  */
-const withNextIntl = nextIntlPlugin('./src/i18n/server.ts');
 
 /**
  * Send the config to server while build or lint.
  */
-export default withNextIntl(withMDX(million.next(nextConfig)));
+export default nextConfig;
