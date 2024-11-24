@@ -7,10 +7,8 @@
   ); */
   background-size: 4px 4px;
   backdrop-filter: brightness(100%) blur(25px);
-  background-color: light-dark(
-    rgba(248, 249, 250, 0.82),
-    rgba(37, 38, 43, 0.82)
-  );
+  background-color:
+    rgba(248, 249, 250, 0.82);
   position: fixed;
   top: 0;
   left: 0;
@@ -40,8 +38,13 @@
   text-decoration: none;
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
   font-size: var(--mantine-font-size-sm);
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: -0.05em;
+  border: rem(1.75px) solid var(--mantine-color-gray-5);
+  box-shadow: light-dark(
+    0 0 20px rgba(134, 133, 133, 0.1),
+    0 0 20px rgba(164, 161, 161, 0.1)
+  );
 
   @media (max-width: $mantine-breakpoint-xs) {
     width: 90%;
