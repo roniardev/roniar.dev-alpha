@@ -1,4 +1,4 @@
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
 import { NavigationProgress } from '@mantine/nprogress';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { Metadata } from 'next';
@@ -67,9 +67,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export default async function LocaleLayout(props: Props) {
   return (
-    <html lang="en">
+    <html lang="en" data-mantine-color-scheme="light">
       <head>
-        <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.icon" />
         <link
           rel="apple-touch-icon"
