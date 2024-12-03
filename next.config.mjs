@@ -22,6 +22,8 @@ const nextConfig = {
     turbo: {
       moduleIdStrategy: 'deterministic',
     },
+    reactCompiler: true,
+    optimisticClientCache: true,
   },
 
   images: {

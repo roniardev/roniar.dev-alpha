@@ -1389,7 +1389,7 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@babel/types@7.26.0", "@babel/types@^7.25.9", "@babel/types@^7.26.0":
+"@babel/types@7.26.0", "@babel/types@^7.19.0", "@babel/types@^7.25.9", "@babel/types@^7.26.0":
   version "7.26.0"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.26.0.tgz#deabd08d6b753bc8e0f198f8709fb575e31774ff"
   integrity sha512-Z/yiTPj+lDVnF7lWeKCIJzaIkI0vYO87dMpZ4bg4TDrFe4XXLFWL1TbXU27gBP3QccxV9mZICCrnjnYlJjXHOA==
@@ -7587,6 +7587,13 @@ babel-plugin-polyfill-regenerator@^0.6.1:
   integrity sha512-2R25rQZWP63nGwaAswvDazbPXfrM3HwVoBXK6HcqeKrSrL/JqcC/rDcf95l4r7LXLyxDXc8uQDa064GubtCABg==
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.6.2"
+
+babel-plugin-react-compiler@^19.0.0-beta-df7b47d-20241124:
+  version "19.0.0-beta-df7b47d-20241124"
+  resolved "https://registry.yarnpkg.com/babel-plugin-react-compiler/-/babel-plugin-react-compiler-19.0.0-beta-df7b47d-20241124.tgz#1da10ca50123079458f957956db1070cf22624bb"
+  integrity sha512-93iSASR20HNsotcOTQ+KPL0zpgfRFVWL86AtXpmHp995HuMVnC9femd8Winr3GxkPEh8lEOyaw3nqY4q2HUm5w==
+  dependencies:
+    "@babel/types" "^7.19.0"
 
 babel-plugin-syntax-hermes-parser@^0.21.1:
   version "0.21.1"
