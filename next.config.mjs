@@ -1,6 +1,6 @@
 import './src/env.mjs';
 import { createSecureHeaders } from 'next-secure-headers';
-import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
+import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
 
 const withVanillaExtract = createVanillaExtractPlugin();
 const hostnames = [
