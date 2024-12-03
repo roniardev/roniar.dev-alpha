@@ -1,6 +1,8 @@
 import './src/env.mjs';
 import { createSecureHeaders } from 'next-secure-headers';
+import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
 
+const withVanillaExtract = createVanillaExtractPlugin();
 const hostnames = [
   'localhost:3000',
   'roniar.dev',
@@ -17,7 +19,7 @@ const nextConfig = {
   /**
    * Configuration for next/image.
    */
-
+  swcMinify: true,
   experimental: {
     turbo: {
       moduleIdStrategy: 'deterministic',
@@ -71,4 +73,4 @@ const nextConfig = {
 /**
  * Send the config to server while build or lint.
  */
-export default nextConfig;
+export default withVanillaExtract(nextConfig);
