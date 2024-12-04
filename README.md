@@ -1,5 +1,6 @@
 # roniar.dev
-My Lovely Website
+My Lovely Website V 1.0
+
 This is a template for [Next.js](https://nextjs.org/) app router + [Mantine](https://mantine.dev/).
 If you want to use pages router instead, see [next-pages-template](https://github.com/mantinedev/next-pages-template).
 
