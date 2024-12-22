@@ -3,27 +3,21 @@
 import { Burger, Container, Flex, Group, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import { useMemo } from 'react';
 
 import classes from './styles.module.css';
 
-import { ColorSchemeToggle } from '@/components/utils/ColorSchemeToggle';
-import LocaleSwitcher from '@/components/utils/LanguageSwitcher';
-
-import { usePathname } from '@/navigation';
-
 export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
   const pathName = usePathname();
-  const locale = useLocale();
 
   const links = useMemo(
     () => [
-      { link: `/${locale}/projects`, label: 'Projects' },
+      { link: '/projects', label: 'Projects' },
       // { link: `/${locale}/friends`, label: 'Friends' },
     ],
-    [locale],
+    [],
   );
 
   const items = links.map((link) => (
@@ -32,7 +26,7 @@ export function Header() {
       prefetch
       key={link.label}
       className={classes.link}
-      data-active={`/${locale}${pathName}` === link.link || undefined}
+      data-active={`${pathName}` === link.link || undefined}
     >
       {link.label}
     </Link>
@@ -62,7 +56,7 @@ export function Header() {
         >
           RA
         </Text>
-        <Link href={`/${locale}`}>
+        <Link href="/">
           <Text
             fw={700}
             size="xl"
@@ -79,8 +73,8 @@ export function Header() {
           {items}
         </Group>
         <Group gap={12} visibleFrom="xs">
-          <ColorSchemeToggle />
-          <LocaleSwitcher />
+          {/* <ColorSchemeToggle /> */}
+          {/* <LocaleSwitcher /> */}
         </Group>
 
         <Burger
@@ -101,10 +95,7 @@ export function Header() {
         }}
         hiddenFrom="xs"
       >
-        <ColorSchemeToggle />
-        <Flex mb="sm">
-          <LocaleSwitcher />
-        </Flex>
+        <Flex mb="sm">{/* <LocaleSwitcher /> */}</Flex>
         {items}
       </Flex>
     </header>

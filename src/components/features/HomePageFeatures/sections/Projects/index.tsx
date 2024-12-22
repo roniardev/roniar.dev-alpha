@@ -14,7 +14,6 @@ import {
 import { useMediaQuery } from '@mantine/hooks';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
 
 import classes from './styles.module.css';
 
@@ -45,7 +44,6 @@ const dataUrl = `data:image/svg+xml;base64,${toBase64(shimmer(700, 500))}`;
 
 export function Projects() {
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
-  const locale = useLocale();
 
   return (
     <Flex direction="column" gap="xl" my="md">
@@ -128,7 +126,7 @@ export function Projects() {
           ))}
         </SimpleGrid>
       </FadeUpShow>
-      <Link href={`/${locale}/projects`} style={{ width: '100%' }}>
+      <Link href="/projects" style={{ width: '100%' }}>
         <Button radius="lg" w="100%">
           <Text size="md" fw={700} style={{ letterSpacing: '-0.05em' }}>
             View More Projects...
