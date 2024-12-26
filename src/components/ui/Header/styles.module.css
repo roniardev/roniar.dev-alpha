@@ -37,7 +37,7 @@
   border-radius: var(--mantine-radius-sm);
   text-decoration: none;
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
-  font-size: var(--mantine-font-size-sm);
+  font-size: var(--mantine-font-size-md);
   font-weight: 900;
   letter-spacing: -0.05em;
   border: rem(0.56px) solid var(--mantine-color-gray-5);
