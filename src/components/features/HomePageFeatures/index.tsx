@@ -7,7 +7,7 @@ import { Projects } from './sections/Projects';
 const HomePageFeatures: React.FC = () => (
   <Container pt="md">
     <Introduction />
-    <Flex direction="column" gap="md" mt="md">
+    <Flex direction="column" mt="sm">
       <Experiences />
       <Projects />
     </Flex>

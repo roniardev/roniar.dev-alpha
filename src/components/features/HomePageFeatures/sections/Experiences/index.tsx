@@ -65,7 +65,7 @@ function Experiences() {
         </Badge>
       </Center>
       <Card withBorder w="100%" radius="md" className={classes.card} px="xl">
-        <Flex direction="column" gap="md" my="md">
+        <Flex direction="column" gap="md" my="sm">
           <Timeline active={1} bulletSize={24} lineWidth={2}>
             {experiences.map((experience, index) => (
               <Timeline.Item
@@ -85,7 +85,7 @@ function Experiences() {
               >
                 <Flex
                   direction={isMobile ? 'column' : 'row'}
-                  gap={isMobile ? 'xs' : 'md'}
+                  gap={isMobile ? 'xs' : 'sm'}
                   align={isMobile ? 'flex-start' : 'center'}
                   w="100%"
                   justify={isMobile ? 'flex-start' : 'space-between'}

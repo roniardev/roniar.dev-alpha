@@ -4,14 +4,13 @@ import {
   Badge,
   Button,
   Card,
-  em,
+  Container,
   Flex,
   SimpleGrid,
   Text,
   Title,
   useMantineTheme,
 } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
 import {
   IconBook,
   IconBrandDiscord,
@@ -47,37 +46,56 @@ export function Introduction() {
 
   const dataUrl = `data:image/svg+xml;base64,${toBase64(shimmer(200, 200))}`;
   const theme = useMantineTheme();
-  const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
+  // const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
 
   return (
-    <Flex direction={isMobile ? 'column' : 'row'} gap="md">
+    <Flex
+      direction={{
+        base: 'column',
+        md: 'row',
+      }}
+      gap="md"
+    >
       <Flex
         justify="space-between"
         style={{
           width: '100%',
         }}
         gap="md"
-        direction={isMobile ? 'column' : 'row'}
+        direction={{
+          base: 'column',
+          md: 'row',
+        }}
       >
-        <section
-          style={{
-            width: isMobile ? '100%' : '60%',
+        <Container
+          w={{
+            base: '100%',
+            md: '60%',
           }}
         >
           {' '}
           <Card withBorder w="100%" radius="md" className={classes.card}>
             <Flex
-              direction={isMobile ? 'column-reverse' : 'row'}
+              direction={{
+                base: 'column-reverse',
+                md: 'row',
+              }}
               gap="md"
               p="md"
-              justify={isMobile ? 'center' : 'flex-start'}
-              align={isMobile ? 'center' : 'center'}
+              justify={{
+                base: 'center',
+                md: 'flex-start',
+              }}
+              align="center"
             >
               <Flex
                 direction="column"
                 gap="xs"
-                justify={isMobile ? 'center' : 'center'}
-                align={isMobile ? 'center' : 'flex-start'}
+                justify="center"
+                align={{
+                  base: 'center',
+                  md: 'flex-start',
+                }}
               >
                 <Badge tt="capitalize" p="md" variant="outline">
                   <Title
@@ -148,9 +166,16 @@ export function Introduction() {
               />
             </Flex>
           </Card>
-        </section>
+        </Container>
 
-        <Flex direction="column" gap="md" w={isMobile ? '100%' : '40%'}>
+        <Flex
+          direction="column"
+          gap="md"
+          w={{
+            base: '100%',
+            md: '40%',
+          }}
+        >
           <section
             style={{
               width: '100%',
@@ -171,8 +196,8 @@ export function Introduction() {
                     Find Me On
                   </Title>
                 </Badge>
-                <Flex direction="column" gap="xl">
-                  <SimpleGrid cols={2} spacing="sm">
+                <Flex direction="column" gap="xl" w="100%">
+                  <SimpleGrid cols={2} spacing="sm" w="100%">
                     <Link
                       href="https://www.linkedin.com/in/roniardiyanto/"
                       target="_blank"
@@ -186,6 +211,7 @@ export function Introduction() {
                         style={{
                           letterSpacing: '-0.05em',
                         }}
+                        w="100%"
                         className={classes.socialButton}
                       >
                         <Text
@@ -209,6 +235,7 @@ export function Introduction() {
                         style={{
                           letterSpacing: '-0.05em',
                         }}
+                        w="100%"
                         className={classes.socialButton}
                       >
                         <Text
@@ -236,6 +263,7 @@ export function Introduction() {
                         style={{
                           letterSpacing: '-0.05em',
                         }}
+                        w="100%"
                         className={classes.socialButton}
                       >
                         <Text
@@ -262,6 +290,7 @@ export function Introduction() {
                         style={{
                           letterSpacing: '-0.05em',
                         }}
+                        w="100%"
                         className={classes.socialButton}
                       >
                         <Text
