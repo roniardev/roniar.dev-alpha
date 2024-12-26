@@ -121,7 +121,7 @@ export function Footer() {
               variant="gradient"
               gradient={{ from: 'yellow', to: 'indigo', deg: 278 }}
             >
-              PROD-2024.11.20
+              PROD-2024.12.26
             </Badge>
             <Badge variant="dot" size="xs" color="green.5">
               All System Operated
