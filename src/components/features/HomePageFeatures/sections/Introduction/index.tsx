@@ -228,7 +228,7 @@ export function Introduction() {
                         </Text>
                       </Button>
                     </Link>
-                    <Link href="https://github.com/infrasync" target="_blank">
+                    <Link href="https://github.com/roniardev" target="_blank">
                       <Button
                         leftSection={<IconBrandGithub size={26} />}
                         size="sm"
