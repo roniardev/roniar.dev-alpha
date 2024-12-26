@@ -27,6 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .link {
@@ -75,19 +76,21 @@
 }
 
 .textHeader {
+  font-size: 1.5rem;
   background: radial-gradient(
     at right bottom,
     rgba(0, 0, 0),
-    rgba(160, 159, 160, 0.8),
+    rgba(71, 70, 71, 0.8),
     rgb(71, 85, 105)
   );
   letter-spacing: '-0.05';
+  font-weight: 900;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: glow 1.5s ease-in-out infinite alternate;
-  -moz-animation: glow 1.5s ease-in-out infinite alternate;
-  animation: glow 1.5s ease-in-out infinite alternate;
+  -webkit-animation: glow 2.5s ease-in-out infinite alternate;
+  -moz-animation: glow 2.5s ease-in-out infinite alternate;
+  animation: glow 2.5s ease-in-out infinite alternate;
 }
 
 @keyframes glow {

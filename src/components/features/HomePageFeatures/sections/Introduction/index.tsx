@@ -4,7 +4,6 @@ import {
   Badge,
   Button,
   Card,
-  Container,
   Flex,
   SimpleGrid,
   Text,
@@ -67,10 +66,14 @@ export function Introduction() {
           md: 'row',
         }}
       >
-        <Container
+        <Flex
           w={{
             base: '100%',
             md: '60%',
+          }}
+          h={{
+            base: '100%',
+            md: '90%',
           }}
         >
           {' '}
@@ -166,7 +169,7 @@ export function Introduction() {
               />
             </Flex>
           </Card>
-        </Container>
+        </Flex>
 
         <Flex
           direction="column"

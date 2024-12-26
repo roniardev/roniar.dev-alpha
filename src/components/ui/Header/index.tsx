@@ -41,26 +41,10 @@ export function Header() {
       }}
     >
       <Container size="md" className={classes.inner}>
-        <Text
-          size="xl"
-          style={{
-            letterSpacing: '-0.05em',
-            // rotate text
-            transform: 'rotate(35deg)',
-            // shiny star effect
-            background: 'linear-gradient(90deg, #f12711, #f5af19)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-          }}
-          fw={900}
-        >
-          RA
-        </Text>
         <Link href="/">
           <Text
-            fw={700}
-            size="xl"
-            // className={`${classes.textHeader}`}
+            fw={900}
+            className={`${classes.textHeader}`}
             tt="capitalize"
             style={{
               letterSpacing: '-0.05em',
@@ -72,10 +56,10 @@ export function Header() {
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
-        <Group gap={12} visibleFrom="xs">
-          {/* <ColorSchemeToggle /> */}
-          {/* <LocaleSwitcher /> */}
-        </Group>
+        {/* <Group gap={12} visibleFrom="xs">
+          <ColorSchemeToggle />
+          <LocaleSwitcher />
+        </Group> */}
 
         <Burger
           opened={opened}
