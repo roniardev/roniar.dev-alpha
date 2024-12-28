@@ -42,7 +42,7 @@ const toBase64 = (str: string) =>
 
 const dataUrl = `data:image/svg+xml;base64,${toBase64(shimmer(700, 500))}`;
 
-export function Projects() {
+export default function Projects() {
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
 
   return (
