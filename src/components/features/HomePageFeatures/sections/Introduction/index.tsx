@@ -16,7 +16,6 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandMedium,
-  IconLocation,
 } from '@tabler/icons-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -186,22 +185,28 @@ export default function Introduction() {
             }}
           >
             <Card withBorder radius="md" className={classes.card} pt={0} px={0}>
-             <Flex bg="dark" w="full" align="center" justify="center" p="xs">
-             <Title
-                order={4}
-                ta="center"
-                style={{
-                  letterSpacing: '-0.05em',
-                }}
-                c="white"
-                tt="capitalize"
+              <Flex bg="dark" w="full" align="center" justify="center" p="xs">
+                <Title
+                  order={4}
+                  ta="center"
+                  style={{
+                    letterSpacing: '-0.05em',
+                  }}
+                  c="white"
+                  tt="capitalize"
+                >
+                  Find Me On
+                </Title>
+              </Flex>
+              <Flex
+                direction="column"
+                gap="lg"
+                align="center"
+                justify="center"
+                p="sm"
               >
-                Find Me On
-              </Title>
-             </Flex>
-              <Flex direction="column" gap="lg" align="center" justify="center" p="sm">
                 {/* <Badge p="md">
-                  
+
                 </Badge> */}
                 <Flex direction="column" gap="xl" w="100%">
                   <SimpleGrid cols={2} spacing="sm" w="100%">
