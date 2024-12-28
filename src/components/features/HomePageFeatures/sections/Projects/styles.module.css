@@ -3,15 +3,22 @@
     0 0 20px rgba(134, 133, 133, 0.1),
     0 0 20px rgba(164, 161, 161, 0.1)
   );
+
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   &:hover {
+    color: light-dark(rgb(226, 114, 54), rgb(88, 199, 250));
+    border: 1px solid light-dark(rgb(226, 114, 54), rgb(88 199 250 / 100%));
+    box-shadow:
+      0 0 20px rgba(134, 133, 133, 0.1),
+      0 0 20px rgba(164, 161, 161, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
   }
-}
-
-.card:hover {
-  border: 1px solid light-dark(rgb(226, 114, 54), rgb(88 199 250 / 100%));
-  color: light-dark(rgb(226, 114, 54), rgb(88, 199, 250));
-  transition: color 1s;
 }
 
 .img {
