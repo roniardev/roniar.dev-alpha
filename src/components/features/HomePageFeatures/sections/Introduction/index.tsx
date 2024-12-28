@@ -185,20 +185,24 @@ export default function Introduction() {
               height: '100%',
             }}
           >
-            <Card withBorder radius="md" className={classes.card}>
-              <Flex direction="column" gap="lg" align="center" justify="center">
-                <Badge p="md">
-                  <Title
-                    order={4}
-                    ta="center"
-                    style={{
-                      letterSpacing: '-0.05em',
-                    }}
-                    tt="capitalize"
-                  >
-                    Find Me On
-                  </Title>
-                </Badge>
+            <Card withBorder radius="md" className={classes.card} pt={0} px={0}>
+             <Flex bg="dark" w="full" align="center" justify="center" p="xs">
+             <Title
+                order={4}
+                ta="center"
+                style={{
+                  letterSpacing: '-0.05em',
+                }}
+                c="white"
+                tt="capitalize"
+              >
+                Find Me On
+              </Title>
+             </Flex>
+              <Flex direction="column" gap="lg" align="center" justify="center" p="sm">
+                {/* <Badge p="md">
+                  
+                </Badge> */}
                 <Flex direction="column" gap="xl" w="100%">
                   <SimpleGrid cols={2} spacing="sm" w="100%">
                     <Link
@@ -333,10 +337,10 @@ export default function Introduction() {
                     style={{
                       letterSpacing: '-0.05em',
                     }}
+                    className={classes.shinyText}
                   >
-                    Indonesia
+                    Open To Work -
                   </Title>
-                  <IconLocation />
                 </Flex>
                 <Flex direction="row" w="100%">
                   <Link

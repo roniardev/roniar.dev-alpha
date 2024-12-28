@@ -4,8 +4,6 @@
     0 0 20px rgba(164, 161, 161, 0.1)
   );
 
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   &:hover {
     color: light-dark(rgb(226, 114, 54), rgb(88, 199, 250));
     border: 1px solid light-dark(rgb(226, 114, 54), rgb(88 199 250 / 100%));

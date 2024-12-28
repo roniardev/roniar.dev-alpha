@@ -19,7 +19,6 @@ const nextConfig = {
   /**
    * Configuration for next/image.
    */
-  swcMinify: true,
   experimental: {
     turbo: {
       moduleIdStrategy: 'deterministic',
