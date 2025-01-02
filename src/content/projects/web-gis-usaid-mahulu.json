@@ -1,7 +1,13 @@
 {
   "name": "WebGIS USAID Mahulu",
   "date": "2023-10-10",
-  "tags": ["Next.js", "Typescript", "GraphQL", "Mapbox"],
+  "tags": [
+    "Next.js",
+    "Typescript",
+    "GraphQL",
+    "Mapbox"
+  ],
   "thumbnailUrlImage": "https://res.cloudinary.com/dvhdig9hg/image/upload/v1717268066/usaid-mahulu.webp",
+  "company": "OPTIMAP",
   "projectUrl": "https://mahulu-webgis.id"
 }
