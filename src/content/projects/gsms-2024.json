@@ -1,7 +1,12 @@
 {
   "name": "GSMS 2024",
   "date": "2024-07-10",
-  "tags": ["Next.js", "Typescript", "GraphQL"],
+  "tags": [
+    "Next.js",
+    "Typescript",
+    "GraphQL"
+  ],
   "thumbnailUrlImage": "https://res.cloudinary.com/dvhdig9hg/image/upload/v1722086249/gsms-2024.webp",
+  "company": "OPTIMAP",
   "projectUrl": "https://gsmsppk.kemdikbud.go.id/"
 }
