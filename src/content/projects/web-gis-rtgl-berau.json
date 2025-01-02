@@ -1,7 +1,13 @@
 {
   "name": "WebGIS RTGL Berau",
   "date": "2023-10-10",
-  "tags": ["Next.js", "Typescript", "GraphQL", "Mapbox"],
+  "tags": [
+    "Next.js",
+    "Typescript",
+    "GraphQL",
+    "Mapbox"
+  ],
   "thumbnailUrlImage": "https://res.cloudinary.com/dvhdig9hg/image/upload/v1717268066/ykan-berau.webp",
+  "company": "OPTIMAP",
   "projectUrl": "https://rtgl-sigap.id"
 }
