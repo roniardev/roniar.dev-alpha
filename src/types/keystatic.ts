@@ -17,4 +17,5 @@ export interface ProjectsData {
   thumbnailUrlImage: string;
   projectUrl: string;
   richText: string;
+  company: 'OPTIMAP' | 'RAYA' | 'ALL';
 }

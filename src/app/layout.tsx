@@ -3,6 +3,7 @@ import { NavigationProgress } from '@mantine/nprogress';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
+import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import React from 'react';
 
 import './globals.css';
@@ -113,12 +114,14 @@ export default async function LocaleLayout(props: Props) {
         <meta name="twitter:url" content={siteConfig.url} />
       </head>
       <body className={plusJakarta.className}>
-        <CSPostHogProvider>
-          <MantineProvider theme={theme} forceColorScheme="light">
-            <NavigationProgress aria-label="Progress Load Bar" />
-            {props.children}
-          </MantineProvider>
-        </CSPostHogProvider>
+        <NuqsAdapter>
+          <CSPostHogProvider>
+            <MantineProvider theme={theme} forceColorScheme="light">
+              <NavigationProgress aria-label="Progress Load Bar" />
+              {props.children}
+            </MantineProvider>
+          </CSPostHogProvider>
+        </NuqsAdapter>
       </body>
       <GoogleAnalytics gaId="G-3P3SXQMEYE" />
       <GoogleTagManager gtmId="G-3P3SXQMEYE" />

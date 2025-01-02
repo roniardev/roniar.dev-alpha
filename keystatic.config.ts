@@ -29,6 +29,16 @@ export default config({
           label: 'Thumbnail URL Image',
           description: 'Thumbnail URL Image',
         }),
+        company: fields.select({
+          label: 'Company',
+          description: 'Company',
+          options: [
+            { label: 'PT. Optima Media Teknologi', value: 'OPTIMAP' },
+            { label: 'Bank Raya', value: 'RAYA' },
+            { label: 'Semua', value: 'ALL' },
+          ],
+          defaultValue: 'ALL',
+        }),
         projectUrl: fields.url({
           label: 'Project URL',
           description: 'Project URL',
