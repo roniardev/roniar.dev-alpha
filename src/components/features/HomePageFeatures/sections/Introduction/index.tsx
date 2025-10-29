@@ -25,11 +25,8 @@ import Link from 'next/link';
 
 import classes from './styles.module.css';
 
-import { FadeDownShow } from '@/components/ui/FadeDownShow';
-import { FadeInShow } from '@/components/ui/FadeInShow';
-import { FadeUpShow } from '@/components/ui/FadeUpShow';
-
-const shimmer = (w: number, h: number) => `
+export function Introduction() {
+  const shimmer = (w: number, h: number) => `
   <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
       <linearGradient id="g">
@@ -43,14 +40,12 @@ const shimmer = (w: number, h: number) => `
     <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
   </svg>`;
 
-const toBase64 = (str: string) =>
-  typeof window === 'undefined'
-    ? Buffer.from(str).toString('base64')
-    : window.btoa(str);
+  const toBase64 = (str: string) =>
+    typeof window === 'undefined'
+      ? Buffer.from(str).toString('base64')
+      : window.btoa(str);
 
-const dataUrl = `data:image/svg+xml;base64,${toBase64(shimmer(200, 200))}`;
-
-export function Introduction() {
+  const dataUrl = `data:image/svg+xml;base64,${toBase64(shimmer(200, 200))}`;
   const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
 
@@ -64,7 +59,7 @@ export function Introduction() {
         gap="md"
         direction={isMobile ? 'column' : 'row'}
       >
-        <FadeInShow
+        <section
           style={{
             width: isMobile ? '100%' : '60%',
           }}
@@ -153,10 +148,10 @@ export function Introduction() {
               />
             </Flex>
           </Card>
-        </FadeInShow>
+        </section>
 
         <Flex direction="column" gap="md" w={isMobile ? '100%' : '40%'}>
-          <FadeUpShow
+          <section
             style={{
               width: '100%',
               height: '100%',
@@ -284,8 +279,8 @@ export function Introduction() {
                 </Flex>
               </Flex>
             </Card>
-          </FadeUpShow>
-          <FadeDownShow
+          </section>
+          <section
             style={{
               width: '100%',
               height: '100%',
@@ -349,7 +344,7 @@ export function Introduction() {
                 </Flex>
               </Flex>
             </Card>
-          </FadeDownShow>
+          </section>
         </Flex>
       </Flex>
     </Flex>

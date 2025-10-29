@@ -81,7 +81,7 @@ function Experiences() {
                     {experience.title}
                   </Text>
                 }
-                key={experience.title}
+                key={experience.company}
               >
                 <Flex
                   direction={isMobile ? 'column' : 'row'}
